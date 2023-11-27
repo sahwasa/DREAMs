@@ -206,7 +206,7 @@ $navH:280px;
     button{width:100px;line-height:40px;font-size:14px;}
   }
   .right{margin-left:auto;display:flex;gap:3px;}
-  .scroll{overflow-y:auto;background-color:#f6f6f6;}
+  .scroll{overflow-y:scroll;background-color:#f6f6f6;}
 }
 .tbl_hover tbody tr:hover{cursor:pointer;background-color:#f6f6f6;}
 .tbl_default{width:100%;border-collapse:separate;
