@@ -1,0 +1,67 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>활용인프라관리</li>
+            <li>CCTV</li>
+          </ul>
+        </section>
+        <h1>CCTV<span>활용인프라관리</span></h1>
+      </header>
+      <section class="content">
+        <div class="search_area">
+          <ul class="search_lst">
+            <li><select name="" id="" title="지역"><option value="">지역</option></select></li>
+            <li><select name="" id="" title="구분"><option value="">구분</option></select></li>
+          </ul>
+          <button type="button" class="btn_blue">검색</button>
+        </div>
+        <div class="tbl_wrap">
+          <div class="top_wrap">
+            <span class="right">
+              <button type="button" class="btn_add" onclick="document.querySelector('.p_add_manhole').showModal();">등록</button>
+              <button type="button" class="btn_del2">삭제</button>
+            </span>
+          </div>
+          <table class="tbl_lst">
+            <caption>CCTV 관리</caption>
+            <thead>
+              <tr>
+                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
+                <th scope="col">ID</th>
+                <th scope="col">주소</th>
+                <th scope="col">행정기관코드</th>
+                <th scope="col">등록자 ID</th>
+                <th scope="col">등록일시</th>
+                <th scope="col">사용여부</th>
+                <th scope="col">수정</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
+                <td>MH-01</td>
+                <td>용인시 기흥구</td>
+                <td>aaaa</td>
+                <td>Admin</td>
+                <td>2020-07-07</td>
+                <td>사용</td>
+                <td><button type="button" class="btn_modify">수정</button></td>
+              </tr>              
+            </tbody>
+          </table>
+          @@include('../inc/paginate.html')
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../inc/pop/p_add_cctv.html')
+@@include('../inc/script.html')
+</body>
+</html>

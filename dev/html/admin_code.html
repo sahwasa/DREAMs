@@ -1,0 +1,154 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>시스템관리</li>
+            <li>코드관리</li>
+          </ul>
+        </section>
+        <h1>코드관리<span>시스템관리</span></h1>
+      </header>
+      <section class="content asymmetrical linked admin_code">
+        <div class="tbl_wrap left">
+          <div class="top_wrap">
+            <h1>그룹코드</h1>
+            <span class="right">
+              <button type="button" class="btn_add" onclick="document.querySelector('.p_add_groupcode').showModal();">등록</button>
+              <button type="button" class="btn_del2">삭제</button>
+            </span>
+          </div>
+          <table class="tbl_lst">
+            <caption>코드관리</caption>
+            <colgroup>
+              <col style="width:60px;">
+              <col style="width:120px;" span="2">
+              <col>
+              <col style="width:90px;">
+              <col style="width:60px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th id="col1-1"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
+                <th id="col1-2">그룹코드</th>
+                <th id="col1-3">코드명</th>
+                <th id="col1-4">설명</th>
+                <th id="col1-5">사용여부</th>
+                <th id="col1-6">수정</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="scroll">
+            <table class="tbl_lst">
+              <colgroup>
+                <col style="width:60px;">
+                <col style="width:120px;" span="2">
+                <col>
+                <col style="width:90px;">
+                <col style="width:60px;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td headers="col1-1"><input type="checkbox" class="row_check" title="줄선택"/></td>
+                  <td headers="col1-2">L001</td>
+                  <td headers="col1-3">그룹코드</td>
+                  <td headers="col1-4">-</td>
+                  <td headers="col1-5">
+                    <span class="btn_switch_single">
+                      <input type="checkbox" id="r1" checked="">
+                      <label for="r1">사용여부</label>                      
+                    </span>
+                  </td>
+                  <td headers="col1-6"><button type="button" class="btn_modify">수정</button></td>
+                </tr>              
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tbl_wrap right">
+          <div class="top_wrap">
+            <h1>상세코드</h1>
+            <span class="right">
+              <button type="button" class="btn_add" onclick="document.querySelector('.p_add_dtlcode').showModal();">등록</button>
+              <button type="button" class="btn_del2">삭제</button>
+            </span>
+          </div>
+          <table class="tbl_lst">
+            <caption>상세코드</caption>
+            <colgroup>
+              <col style="width:60px;">
+              <col style="width:120px;" span="3">
+              <col>
+              <col style="width:90px;">
+              <col style="width:60px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <tr>
+                <th scope="col" id="col2-0"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
+                <th id="col2-1">상위코드</th>
+                <th id="col2-2">코드</th>
+                <th id="col2-3">코드명</th>
+                <th id="col2-4">설명</th>
+                <th id="col2-5">사용여부</th>
+                <th id="col2-6">수정</th>
+              </tr>
+              </tr>
+            </thead>
+          </table>
+          <div class="scroll">
+            <table class="tbl_lst">
+              <colgroup>
+                <col style="width:60px;">
+                <col style="width:120px;" span="3">
+                <col>
+                <col style="width:90px;">
+                <col style="width:60px;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td headers="col2-0"><input type="checkbox" class="row_check" title="줄선택"/></td>
+                  <td headers="col2-1">L001</td>
+                  <td headers="col2-2">L001-1</td>
+                  <td headers="col2-3">상세코드1</td>
+                  <td headers="col2-4">-</td>
+                  <td headers="col2-5">
+                    <span class="btn_switch_single">
+                      <input type="checkbox" id="r2" checked="">
+                      <label for="r2">사용여부</label>                      
+                    </span>
+                  </td>
+                  <td headers="col2-6"><button type="button" class="btn_modify">수정</button></td>
+                </tr>             
+                <tr>
+                  <td headers="col2-0"><input type="checkbox" class="row_check" title="줄선택"/></td>
+                  <td headers="col2-1">L001</td>
+                  <td headers="col2-2">L001-2</td>
+                  <td headers="col2-3">상세코드2</td>
+                  <td headers="col2-4">-</td>
+                  <td headers="col2-5">
+                    <span class="btn_switch_single">
+                      <input type="checkbox" id="r3" checked="">
+                      <label for="r3">사용여부</label>                      
+                    </span>
+                  </td>
+                  <td headers="col2-6"><button type="button" class="btn_modify">수정</button></td>
+                </tr>             
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../inc/pop/p_add_groupcode.html')
+@@include('../inc/pop/p_add_dtlcode.html')
+@@include('../inc/script.html')
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+@import "./reset";
+$maingap:20px;
+dialog{width:var(--width);padding:$maingap;margin:auto;border:none;box-shadow: 1.4px 1.4px 29px 0 rgba(0, 0, 0, 0.08);font-size:13px;z-index:1000;
+  .p_header{@include tit(){h1{font-size:15px;color:$vividblue;font-size:20px;}};border-bottom:2px solid $vividblue;padding-bottom:10px;
+    .btn_close{@include ico_only('\eb2e');cursor:pointer;margin-left:$maingap;
+      &::before{font-size:16px;color:#000;};
+    }
+  }
+  .p_body{max-height:calc(100vh - 240px);overflow-y:auto;font-size:13px;letter-spacing:-0.33px;}
+  .p_foot{display:flex;justify-content: flex-end;align-items: center;gap:3px;margin-top:8px;
+    button{line-height:32px;padding:0 22px;}
+  }
+}
+.line_style{
+  .p_header{border-bottom:2px solid $blue;padding-bottom:10px;margin-bottom:20px;
+    h1{font-size:22px;}
+    .btn_close::before{font-size:20px;}
+  }
+  .p_foot{margin-top:40px;}
+}
+.p_forecast{left:auto;right:-123px;top:46px;
+  $border-color:#d0cdcd;
+  .tbl_wrap{display:flex;border:1px solid #a2acc8;border-radius:5px;padding:10px 13px 20px;}
+  .tbl_scroll_x{flex:1;overflow-x:auto;padding-top:28px;}
+  .head{flex:0 0 36px;margin-top:28px;
+    th{width:36px;font-size:12px;color:#000;border-right:1px solid $border-color;}
+    tr:nth-child(1){height:47px;}
+    tr:nth-child(2){height:114.5px;}
+    tr:nth-child(3){height:83px;}
+    tr:nth-child(4){height:106px;}
+    tr:nth-child(5){height:74px;}
+  }
+  .tbl_weather{width:100%;table-layout:fixed;text-align:center;
+    tr{border-top: 1px solid $border-color;}
+    td{width:46px;font-size:11px;font-weight:700;color:#686868;padding:15px 0;}   
+    td:first-of-type{width:56px;padding-left:10px;}
+    tr:first-child {border-top-width:0;padding:0;}
+    .times td{position:relative;
+      &[data-date]::after{top:-15px;content:attr(data-date);font-size:11px;line-height:18px;font-weight:700;border:1px solid #275aec;border-radius:9px;width:56px;text-align:center;background-color:#fff;}
+      &[data-date]::before{position:absolute;top:3px;left:50%;@include shape(0, 0);border-right:5px solid transparent;border-left:5px solid transparent;border-top:8px solid #275aec;}
+      &::before,
+      &::after{position:absolute;left:50%;transform:translateX(-50%);}
+    }
+    @property --p{
+      syntax: '<number>';
+      inherits: true;
+      initial-value: 1;
+    }
+    .precipitation td{position:relative;
+      i{ --p:calc(var(--val)*-1% + 100%);
+        position:relative;@include shape(21px,21px);display:block;margin:7px auto;background:#f0f3ff;border-radius:0 95% 45% 50% / 0 50% 45% 95%;transform:rotate(45deg);
+      &::before{position:absolute;bottom:0;left:0;@include shape(100%,27px);background-color:#5e8cff;transform:rotate(-45deg) translate(-10%,var(--p));}
+      }
+      color:#5e8cff;font-weight:normal;
+    }
+    .humidity td{
+      p{display:flex;flex-direction:column;justify-content:flex-end;height:60px;margin-top:15px;
+        --p:calc(var(--val)*1%);
+        &::after{flex-shrink:0;@include shape(calc(100% - 1px),var(--p));; border-top:3px solid #45ccfb;background-color:#c5f0ff;}
+      }
+    }
+    .temp td{padding-bottom:0;
+      .chart_wrap{height:53px;}
+      }
+    .weathers{border-top-color:transparent;
+      i{@include shape(24px,24px);background-position:50%;background-size:contain;}
+      td{padding-top:0;}
+    }
+    .winds td{
+      i{@include shape(14px,19px);display:block;background:url(../images/weather/img_weather_wind.png) 50% / contain no-repeat;margin:0 auto;}
+      @for $i from 1 to 9{
+        .wind#{$i}{transform: rotate($i * 45deg);}
+      }
+      color:#5e8cff;
+    }
+  } 
+}

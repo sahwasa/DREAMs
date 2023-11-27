@@ -1,0 +1,69 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>시스템관리</li>
+            <li>사용자관리</li>
+          </ul>
+        </section>
+        <h1>사용자관리<span>시스템관리</span></h1>
+      </header>
+      <section class="content">
+        <div class="search_area">
+          <ul class="search_lst">
+            <li>
+              <select name="" id="" title="지역"><option value="">검색조건</option></select>
+              <input type="text">
+            </li>
+          </ul>
+          <button type="button" class="btn_blue">검색</button>
+        </div>
+        <div class="tbl_wrap">
+          <div class="top_wrap">
+            <span class="right">
+              <button type="button" class="btn_add" onclick="document.querySelector('.p_add_manhole').showModal();">등록</button>
+              <button type="button" class="btn_del2">삭제</button>
+            </span>
+          </div>
+          <table class="tbl_lst">
+            <caption>사용자관리</caption>
+            <thead>
+              <tr>
+                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
+                <th scope="col">사용자ID</th>
+                <th scope="col">사용자명</th>
+                <th scope="col">소속기관</th>
+                <th scope="col">부서</th>
+                <th scope="col">직급</th>
+                <th scope="col">등록일</th>
+                <th scope="col">수정</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
+                <td>SYSAdmin</td>
+                <td>홍길동</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>2020-07-07</td>
+                <td><button type="button" class="btn_modify">수정</button></td>
+              </tr>              
+            </tbody>
+          </table>
+          @@include('../inc/paginate.html')
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../inc/pop/p_add_user.html')
+@@include('../inc/script.html')
+</body>
+</html>

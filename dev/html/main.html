@@ -1,0 +1,126 @@
+@@include('../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../inc/header.html')    
+  <main id="content" class="main_container">
+    <section class="pannel">
+      <div class="pannel_wrap">
+        <header class="tit">
+          <h1>실시간 모니터링</h1>
+          <div class="tool">
+            <button type="button" class="btn_ex">도움말</button>
+          </div>
+        </header>
+        <div class="summary">
+          <p>2023.10.10 침수예측 미확인 현황  <em>4건</em></p>
+        </div>
+        <div class="pannel_body">
+          <ul class="place_lst">
+            <li class="grade4" tabindex="0" onclick="location.href='../html/flood_risk.html?index=1,1'">
+              <strong>침수위험</strong>
+              <ul class="dot_lst">
+                <li><em>담당자</em>홍길동</li>
+                <li><em>침수예측일자</em>2023-10-10 12:34:56</li>
+                <li><em>대상지역</em>경기도 용인시</li>
+              </ul>
+            </li>
+            <li class="grade3" tabindex="0">
+              <strong>침수경계</strong>
+              <ul class="dot_lst">
+                <li><em>담당자</em>홍길동</li>
+                <li><em>침수예측일자</em>2023-10-10 12:34:56</li>
+                <li><em>대상지역</em>경기도 용인시</li>
+              </ul>
+            </li>
+            <li class="grade2" tabindex="0">
+              <strong>침수주의</strong>
+              <ul class="dot_lst">
+                <li><em>담당자</em>홍길동</li>
+                <li><em>침수예측일자</em>2023-10-10 12:34:56</li>
+                <li><em>대상지역</em>경기도 용인시</li>
+              </ul>
+            </li>
+            <li class="grade1" tabindex="0">
+              <strong>침수안전</strong>
+              <ul class="dot_lst">
+                <li><em>담당자</em>홍길동</li>
+                <li><em>침수예측일자</em>2023-10-10 12:34:56</li>
+                <li><em>대상지역</em>경기도 용인시</li>
+              </ul>
+            </li>
+          </ul>
+        </div>        
+      </div>
+    </section>
+    <section class="map_wrap">
+      <div class="temp_map">
+        <img src="../images/temp/map-default.png" id="temp_map" width="100%" height="auto" alt="임시 지도배경">
+      </div>
+      <div class="map_ctrl">        
+        <ul class="map_tool">
+          <li><button type="button" class="btn_refresh_square">새로고침</button></li>
+          <li>
+            <div class="vertical_group">
+              <button type="button" class="btn_zoomin_square">확대</button>
+              <button type="button" class="btn_zoomout_square">축소</button>
+            </div>
+          </li>
+        </ul>
+        <ul class="map_type btn_switch">
+          <li><input type="checkbox" id="map_type1" name="map_type"><label for="map_type1">IOT센서</label></li>
+          <li><input type="checkbox" id="map_type2" name="map_type"><label for="map_type2">맨홀</label></li>
+          <li><input type="checkbox" id="map_type3" name="map_type"><label for="map_type3">관로</label></li>
+          <li><input type="checkbox" id="map_type4" name="map_type"><label for="map_type4">CCTV</label></li>
+        </ul>
+        <div class="map_layer">
+          <button type="button" onclick="toggle('.p_forecast');" class="btn_forecast weather1">23℃ 맑음</button>
+          @@include('../inc/pop/p_forecast.html')
+          <button type="button" class="btn_radar" onclick="document.querySelector('.p_forecast').close();">레이더</button>
+        </div>
+        <ul class="map_style btn_switch">
+          <li><input type="radio" id="default_view" name="map_style" checked><label for="default_view">일반지도</label></input></li>
+          <li><input type="radio" id="sky_view" name="map_style"><label for="sky_view">위성지도</label></input></li>
+          <li><input type="radio" id="2d_view" name="map_style"><label for="2d_view">2D지도</label></input></li>
+        </ul>
+        <div class="lst_cctv">
+          <button type="button" style="--x:400;--y:300;">cctv</button>
+          <button type="button" style="--x:200;--y:400;">cctv</button>
+          <button type="button" style="--x:350;--y:350;">cctv</button>
+        </div>
+        <div class="lst_sensor">
+          <button type="button" style="--x:300;--y:300;">sensor</button>
+          <button type="button" style="--x:500;--y:400;">sensor</button>
+          <button type="button" style="--x:250;--y:450;">sensor</button>
+          <button type="button" style="--x:300;--y:200;">sensor</button>
+          <div class="layer">
+            <button type="button" class="btn_del">close</button>
+            <strong>IOT센서</strong>
+            <ul class="dot_lst">
+              <li><em>분류코드</em>S15</li>
+              <li><em>유형</em>하천 수위계</li>
+              <li><em>설치장소</em>경안천 상류</li>
+              <li><em>수위</em>9.5m</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pipe">
+          <div class="layer">
+            <button type="button" class="btn_del">close</button>
+            <strong>관로</strong>
+            <ul class="dot_lst">
+              <li><em>관로ID</em>PH-1</li>
+              <li><em>유형</em>수위계</li>
+              <li><em>현재수심</em>00㎜</li>
+              <li><em>예측수위</em>9.5m</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+@@include('../inc/script.html')
+<script src="../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../js/chart_temp.js"></script>
+<script src="../js/monitoring.js"></script>
+</body>
+</html>

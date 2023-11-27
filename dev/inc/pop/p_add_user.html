@@ -1,0 +1,29 @@
+<dialog class="p_add_manhole" style="--width:400px">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>사용자 추가</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" onclick="document.querySelector('dialog').close();">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="ipt_lst dot_lst">
+        <li><label for="" class="required">ID</label><input type="text" id="" /><button type="button" class="btn_gray">중복</button></li>
+        <li><label for="" class="required">이름</label><input type="text" id=""></li>
+        <li><label for="" class="required">비밀번호</label><input type="password"></li>
+        <li><label for="" class="required">확인</label><input type="password"></li>
+        <li><label for="" class="required">소속기관</label><input type="text"></li>
+        <li><label for="" class="required">부서</label><input type="text"></li>
+        <li><label for="">직급</label><input type="text"></li>
+        <li><label for="">연락처</label><input type="text"></li>
+        <li><label for="" class="required">핸드폰</label><input type="text"></li>
+        <li><label for="">이메일</label><input type="text"></li>
+        <li><label for="" class="required">권한구분</label><select name="" id=""><option value="">Admin</option></select></li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray" onclick="document.querySelector('dialog').close();">취소</button>
+    </section>
+  </form>
+</dialog>

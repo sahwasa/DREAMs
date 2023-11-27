@@ -1,0 +1,28 @@
+<dialog class="p_add_dtlcode" style="--width:400px">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>상세코드 추가</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" onclick="document.querySelector('.p_add_dtlcode').close()">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="ipt_lst dot_lst">
+        <li><label for="">상위코드</label><input type="text" id="" readonly value="L001" /></li>
+        <li><label for="" class="required">그룹코드</label><input type="text" id="" /></li>
+        <li><label for="" class="required">코드명</label><input type="text" id=""></li>
+        <li><label for="">설명</label><input type="text"></li>
+        <li><label for=""class="required">사용여부</label>
+          <span class="btn_switch_single">
+            <input type="checkbox" id="r5" checked="">
+            <label for="r5">사용여부</label>                      
+          </span>
+        </li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray" onclick="document.querySelector('.p_add_dtlcode').close()">취소</button>
+    </section>
+  </form>
+</dialog>

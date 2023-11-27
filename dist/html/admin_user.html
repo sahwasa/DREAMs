@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <title>내 · 외배수 관리 · 운영 지원 시스템</title>
+  <link rel="stylesheet" href="../font/fontello/css/fontello.css">
+  <link rel="stylesheet" href="../css/cmmn.css">
+  <link rel="stylesheet" href="../css/pop.css">
+</head>
+<body>
+
+<div id="wrap" class="wrap">
+  <header class="header">
+  <h1>
+    <span class="author">행정안전부</span>
+    <a href=""><em>내 · 외배수</em> 관리 · 운영 지원 시스템</a>
+  </h1>
+  <div class="util">
+    <b class="account">시스템 운영자님</b>
+    <ul class="my_svc">
+      <li><button type="button">내 정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+    </ul>
+  </div>
+  <nav class="nav">
+    <ul class="nav_lst">
+      <li><a href="../html/main.html">침수관리 종합 정보</a>
+        <ul class="sub">
+          <li><a href="../html/main.html">실시간 모니터링</a></li>
+          <li><a href="#" onclick="alert('준비중')" >e-SOP</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/infra_sensor.html">활용 인프라 관리</a>
+        <ul class="sub">
+          <li><a href="../html/infra_sensor.html">IOT 센서</a></li>
+          <li><a href="../html/infra_manhole.html">맨홀</a></li>
+          <li><a href="../html/infra_pipe.html">관로</a></li>
+          <li><a href="../html/infra_cctv.html">CCTV</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/admin_user.html">시스템 관리</a>
+        <ul class="sub">
+          <li><a href="../html/admin_user.html">사용자관리</a></li>
+          <li><a href="../html/admin_code.html">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <footer class="footer">Copyright ⓒ 행정안전부. All right reserved.</footer>  
+</header>    
+  <main id="content" class="main_container">
+    <div class="container">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>시스템관리</li>
+            <li>사용자관리</li>
+          </ul>
+        </section>
+        <h1>사용자관리<span>시스템관리</span></h1>
+      </header>
+      <section class="content">
+        <div class="search_area">
+          <ul class="search_lst">
+            <li>
+              <select name="" id="" title="지역"><option value="">검색조건</option></select>
+              <input type="text">
+            </li>
+          </ul>
+          <button type="button" class="btn_blue">검색</button>
+        </div>
+        <div class="tbl_wrap">
+          <div class="top_wrap">
+            <span class="right">
+              <button type="button" class="btn_add" onclick="document.querySelector('.p_add_manhole').showModal();">등록</button>
+              <button type="button" class="btn_del2">삭제</button>
+            </span>
+          </div>
+          <table class="tbl_lst">
+            <caption>사용자관리</caption>
+            <thead>
+              <tr>
+                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
+                <th scope="col">사용자ID</th>
+                <th scope="col">사용자명</th>
+                <th scope="col">소속기관</th>
+                <th scope="col">부서</th>
+                <th scope="col">직급</th>
+                <th scope="col">등록일</th>
+                <th scope="col">수정</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
+                <td>SYSAdmin</td>
+                <td>홍길동</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>2020-07-07</td>
+                <td><button type="button" class="btn_modify">수정</button></td>
+              </tr>              
+            </tbody>
+          </table>
+          <div class="paginate tui-pagination" id="pagination">
+  <span class="tui-page-btn tui-is-disabled tui-first">
+    <span class="tui-ico-first">first</span>
+  </span>
+  <span class="tui-page-btn tui-is-disabled tui-prev">
+    <span class="tui-ico-prev">prev</span>
+  </span>
+  <strong class="tui-page-btn tui-is-selected tui-first-child">1</strong>
+  <a href="#" class="tui-page-btn tui-last-child">2</a>
+  <a href="#" class="tui-page-btn tui-next">
+    <span class="tui-ico-next">next</span>
+  </a>
+  <a href="#" class="tui-page-btn tui-last">
+    <span class="tui-ico-last">last</span>
+  </a>
+</div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<dialog class="p_add_manhole" style="--width:400px">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>사용자 추가</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" onclick="document.querySelector('dialog').close();">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="ipt_lst dot_lst">
+        <li><label for="" class="required">ID</label><input type="text" id="" /><button type="button" class="btn_gray">중복</button></li>
+        <li><label for="" class="required">이름</label><input type="text" id=""></li>
+        <li><label for="" class="required">비밀번호</label><input type="password"></li>
+        <li><label for="" class="required">확인</label><input type="password"></li>
+        <li><label for="" class="required">소속기관</label><input type="text"></li>
+        <li><label for="" class="required">부서</label><input type="text"></li>
+        <li><label for="">직급</label><input type="text"></li>
+        <li><label for="">연락처</label><input type="text"></li>
+        <li><label for="" class="required">핸드폰</label><input type="text"></li>
+        <li><label for="">이메일</label><input type="text"></li>
+        <li><label for="" class="required">권한구분</label><select name="" id=""><option value="">Admin</option></select></li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray" onclick="document.querySelector('dialog').close();">취소</button>
+    </section>
+  </form>
+</dialog>
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="../js/ui_cmmn.js"></script>
+<script>
+  commonInit();
+</script>
+</body>
+</html>

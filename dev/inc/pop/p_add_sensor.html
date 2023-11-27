@@ -1,0 +1,25 @@
+<dialog class="p_add_sensor" style="--width:400px">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>IOT 센서 추가</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" onclick="document.querySelector('dialog').close();">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="ipt_lst dot_lst">
+        <li><label for="sensor_id" class="required">ID</label><input type="text" id="sensor_id" /></li>
+        <li><label for="sensor_type" class="required">종류</label><select name="" id="sensor_type"><option value="">센서종류</option></select></li>
+        <li><label for="sensor_ip" class="required">IP주소</label><input type="text" id="sensor_ip"></li>
+        <li><label for="" class="required">위도</label><input type="text"></li>
+        <li><label for="" class="required">경도</label><input type="text"></li>
+        <li><label for="" class="required">계측단위</label><select name="" id=""><option value="">㎜</option></select></li>
+        <li><label for="" class="required">설치일시</label><input type="date"></li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray" onclick="document.querySelector('dialog').close();">취소</button>
+    </section>
+  </form>
+</dialog>
