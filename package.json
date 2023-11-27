@@ -31,6 +31,8 @@
     "sass": "^1.59.3"
   },
   "dependencies": {
+    "chartjs": "^0.3.24",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "jquery": "^3.6.4"
   }
 }
