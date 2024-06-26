@@ -1,0 +1,78 @@
+@@include('../../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container esop">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">침수관리 종합 정보</a></li>
+            <li><a href="#">e-SOP</a></li>
+            <li><a href="#">재난대응 프로세스 관리</a></li>
+            <li>비상 연락망</li>
+          </ul>
+        </section>
+        <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
+      </header>
+      @@include('../../inc/esop/nav.html')
+      <section class="content">
+        <header>
+          <h2>비상 연락망<span>재난대응 프로세스 관리</span></h2>
+        </header>
+        <div class="search_area">
+          <ul class="search_lst">
+            <li><select name="" id="" title="구분 선택"><option value="">구분 전체</option></select></li>
+          </ul>
+          <button type="button" class="btn_blue">검색</button>
+        </div>
+        <div class="tbl_wrap">
+          <div class="top_wrap">
+            <span class="right">
+              <button type="button" class="btn_add" popovertarget="p_add_emergencyContacts">등록</button>
+              <button type="button" class="btn_del2">삭제</button>
+            </span>
+          </div>
+          <div class="tbl_scroll" style="--h:58px">
+            <table class="tbl_lst">
+              <caption>비상 연락망</caption>
+              <thead>
+                <tr>
+                  <th scope="col">구분</th>
+                  <th scope="col">기관&sol;부서</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">성명</th>
+                  <th scope="col">연락처(유선)</th>
+                  <th scope="col">팩스</th>
+                  <th scope="col">이메일</th>
+                  <th scope="col">비고</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MH-01</td>
+                  <td>용인시 기흥구</td>
+                  <td>aaaa</td>
+                  <td>000000000</td>
+                  <td>000000000</td>
+                  <td>Admin</td>
+                  <td>2020-07-07</td>
+                  <td>2020-07-07</td>
+                  <td>
+                    <button type="button" class="btn_modify">수정</button>
+                    <button type="button" class="btn_delete">삭제</button>
+                  </td>
+                </tr>              
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../../inc/esop/p_add_emergencyContacts.html')
+@@include('../../inc/script.html')
+</body>
+</html>

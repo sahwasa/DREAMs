@@ -1,25 +1,23 @@
-@@include('../inc/top.html')
+@@include('../../inc/top.html')
 <div id="wrap" class="wrap">
-  @@include('../inc/header.html')    
+  @@include('../../inc/header.html')    
   <main id="content" class="main_container">
     <div class="container">
       <header>
         <section class="bredcrumb">
           <ul>
             <li><a href="#">Home</a></li>
-            <li>시스템관리</li>
-            <li>사용자관리</li>
+            <li>활용인프라관리</li>
+            <li>관로</li>
           </ul>
         </section>
-        <h1>사용자관리<span>시스템관리</span></h1>
+        <h1>관로<span>활용인프라관리</span></h1>
       </header>
       <section class="content">
         <div class="search_area">
           <ul class="search_lst">
-            <li>
-              <select name="" id="" title="지역"><option value="">검색조건</option></select>
-              <input type="text">
-            </li>
+            <li><select name="" id="" title="지역"><option value="">지역</option></select></li>
+            <li><select name="" id="" title="구분"><option value="">구분</option></select></li>
           </ul>
           <button type="button" class="btn_blue">검색</button>
         </div>
@@ -31,39 +29,41 @@
             </span>
           </div>
           <table class="tbl_lst">
-            <caption>사용자관리</caption>
+            <caption>관로 관리</caption>
             <thead>
               <tr>
                 <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
-                <th scope="col">사용자ID</th>
-                <th scope="col">사용자명</th>
-                <th scope="col">소속기관</th>
-                <th scope="col">부서</th>
-                <th scope="col">직급</th>
-                <th scope="col">등록일</th>
+                <th scope="col">ID</th>
+                <th scope="col">주소</th>
+                <th scope="col">행정기관코드</th>
+                <th scope="col">현재수심</th>
+                <th scope="col">임계수위</th>
+                <th scope="col">등록자 ID</th>
+                <th scope="col">등록일시</th>
                 <th scope="col">수정</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><input type="checkbox" class="row_check" title="줄선택"/></td>
-                <td>SYSAdmin</td>
-                <td>홍길동</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td>MH-01</td>
+                <td>용인시 기흥구</td>
+                <td>aaaa</td>
+                <td>000000000</td>
+                <td>000000000</td>
+                <td>Admin</td>
                 <td>2020-07-07</td>
                 <td><button type="button" class="btn_modify">수정</button></td>
               </tr>              
             </tbody>
           </table>
-          @@include('../inc/paginate.html')
+          @@include('../../inc/paginate.html')
         </div>
       </section>
     </div>
   </main>
 </div>
-@@include('../inc/pop/p_add_user.html')
-@@include('../inc/script.html')
+@@include('../../inc/pop/p_add_pipe.html')
+@@include('../../inc/script.html')
 </body>
 </html>

@@ -1,0 +1,31 @@
+<dialog id="p_add_emergencyContacts" style="--width:500px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>비상 연락망 추가</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_add_emergencyContacts" popoveraction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <div class="ipt_filter">
+        <ul>
+          <li><label for="">구분</label><select name="" id=""><option value="">전체</option></select></li>
+          <li><label for="">기관&sol;부서</label><select name="" id=""><option value="">전체</option></select></li>
+        </ul>
+      </div>
+      <ul class="ipt_lst dot_lst">
+        <li><label for="" class="required">담당자명</label><input type="text" id="" /></li>
+        <li><label for="" class="required">직위</label><input type="text" id="" /></li>
+        <li><label for="" class="required">연락처(유선)</label><input type="text" id="" /></li>
+        <li><label for="" class="required">연락처(무선)</label><input type="text" id="" /></li>
+        <li><label for="" class="required">팩스</label><input type="text" id="" /></li>
+        <li><label for="" class="required">이메일</label><input type="text" id="" /></li>
+        <li><label for="">비고</label><input type="text" id="" /></li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray"  popovertarget="p_add_emergencyContacts" popoveraction="hide">취소</button>
+    </section>
+  </form>
+</dialog>

@@ -1,6 +1,6 @@
-@@include('../inc/top.html')
+@@include('../../inc/top.html')
 <div id="wrap" class="wrap">
-  @@include('../inc/header.html')    
+  @@include('../../inc/header.html')    
   <main id="content" class="main_container">
     <div class="container">
       <header>
@@ -8,10 +8,10 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li>활용인프라관리</li>
-            <li>CCTV</li>
+            <li>맨홀</li>
           </ul>
         </section>
-        <h1>CCTV<span>활용인프라관리</span></h1>
+        <h1>맨홀<span>활용인프라관리</span></h1>
       </header>
       <section class="content">
         <div class="search_area">
@@ -29,13 +29,14 @@
             </span>
           </div>
           <table class="tbl_lst">
-            <caption>CCTV 관리</caption>
+            <caption>맨홀 관리</caption>
             <thead>
               <tr>
                 <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
                 <th scope="col">ID</th>
                 <th scope="col">주소</th>
                 <th scope="col">행정기관코드</th>
+                <th scope="col">임계수위</th>
                 <th scope="col">등록자 ID</th>
                 <th scope="col">등록일시</th>
                 <th scope="col">사용여부</th>
@@ -48,20 +49,54 @@
                 <td>MH-01</td>
                 <td>용인시 기흥구</td>
                 <td>aaaa</td>
+                <td>000000000</td>
                 <td>Admin</td>
                 <td>2020-07-07</td>
                 <td>사용</td>
                 <td><button type="button" class="btn_modify">수정</button></td>
-              </tr>              
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
+                <td>MH-01</td>
+                <td>용인시 기흥구</td>
+                <td>aaaa</td>
+                <td>000000000</td>
+                <td>Admin</td>
+                <td>2020-07-07</td>
+                <td>미사용</td>
+                <td><button type="button" class="btn_modify">수정</button></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
+                <td>MH-01</td>
+                <td>용인시 기흥구</td>
+                <td>aaaa</td>
+                <td>000000000</td>
+                <td>Admin</td>
+                <td>2020-07-07</td>
+                <td>사용</td>
+                <td><button type="button" class="btn_modify">수정</button></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
+                <td>MH-01</td>
+                <td>용인시 기흥구</td>
+                <td>aaaa</td>
+                <td>000000000</td>
+                <td>Admin</td>
+                <td>2020-07-07</td>
+                <td>사용</td>
+                <td><button type="button" class="btn_modify">수정</button></td>
+              </tr>
             </tbody>
           </table>
-          @@include('../inc/paginate.html')
+          @@include('../../inc/paginate.html')
         </div>
       </section>
     </div>
   </main>
 </div>
-@@include('../inc/pop/p_add_cctv.html')
-@@include('../inc/script.html')
+@@include('../../inc/pop/p_add_manhole.html')
+@@include('../../inc/script.html')
 </body>
 </html>

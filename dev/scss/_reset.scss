@@ -25,6 +25,8 @@ b,em,strong{display:inline-block;font-weight:700;color:#000;}
 .blind{@include blind;}
 // color
 $purple:#5616ae;
+$periwinkle:#5956d4;
+$lightpurple:#e9eefd;
 $white:#fff;
 $black:#363636;
 $red:#e42b29;
@@ -32,6 +34,7 @@ $tomato:#ff6347;
 $skyblue:#59c6f2;
 $blue:#1558d3;
 $vividblue:#275aec;
+$lightblue:#edf0f3;
 $navy:#262583;
 $yellow:#ff9702;
 $gold:#ffd460;
@@ -45,4 +48,4 @@ $_signal:(default:#28af03,error:#f00,delay:#ffba00);
 $_zoning:#6a76d3,#a56ad3,#0da839,#ec6c6c;
 $_water_level:#FFFFB3,#FEE98C,#FED265,#FDB850,#FD9C41,#FA7B32,#F45524,#EB311A,#D4131E,#BE0021;
 $_flooding:#ffff7f,#bfff00,#00ffff,#bf7fff,#ff007f;
-$_status:#7EBE63,#4B76C5,#FBBE45,#EB4C52;
+$_status:#3872bb,#f2c21a,#ec7519,#df0909;

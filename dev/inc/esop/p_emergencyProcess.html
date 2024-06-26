@@ -1,0 +1,69 @@
+<dialog id="p_emergencyProcess" class="p_emergencyProcess" style="--width:1200px" popover="manual" open>
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>재난대응프로세스</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_emergencyProcess" popovertargetaction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <div class="tbl_wrap">
+        <div class="top_wrap">
+          <span class="right">
+            <button type="button" class="btn_add" popovertarget="p_add_emergencyContacts">수정</button>
+            <button type="button" class="btn_add" popovertarget="p_add_emergencyContacts">상황전파</button>
+            <button type="button" class="btn_add" onclick="openPopup('../../inc/esop/p_situation_report.html','상황보고','600px','400px')">상황보고</button>
+          </span>
+        </div>
+        <table class="tbl_row">
+          <tr>
+            <th scope="row">조치목록</th>
+            <td>[7] 재난안전상황실 (지대본 상황실) 가동</td>
+          </tr>
+          <tr>
+            <th scope="row">조치내용</th>
+            <td>[7-8] 주요인사 상황실 방문시 브리핑</td>
+          </tr>
+          <tr>
+            <th scope="row">조치목록</th>
+            <td>재난안전과 <button type="button" class="btn_blue_line">선택</button></td>
+          </tr>
+          <tr>
+            <th scope="row">지원부서</th>
+            <td>건강증진과, 건설과, 건축과, 교통과, 기획조정실, 문화홍보실, 보건정책과, 복지정책과, 사고수습 주관부서, 사회복지과, 산림과, 삼척경찰서, 상수도사업소, 상황실, 에너지과, 읍면동 사무소, 읍면동 주민센터, 읍면동 환경부서, 총무과, 하수도사업소, 환경과<button type="button" class="btn_blue_line">선택</button></td>
+          </tr>
+          <tr>
+            <th scope="row">협업기관</th>
+            <td><button type="button" class="btn_blue_line">선택</button></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              에디터
+            </td>
+          </tr>         
+        </table>
+      </div>      
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray" popovertarget="p_emergencyProcess" popovertargetaction="hide">취소</button>
+    </section>
+  </form>
+</dialog>
+
+<dialog id="p_situation_report" class="p_situation_report" style="--width:1200px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>상황보고</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_situation_report" popovertargetaction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray" popovertarget="p_situation_report" popovertargetaction="hide">취소</button>
+    </section>
+  </form>
+</dialog>

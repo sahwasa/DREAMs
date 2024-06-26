@@ -1,0 +1,44 @@
+@@include('../../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container esop">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">침수관리 종합 정보</a></li>
+            <li><a href="#">e-SOP</a></li>
+            <li><a href="#">재난대응 절차</a></li>
+            <li>재난대응 프로세스</li>
+          </ul>
+        </section>
+        <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
+      </header>
+      @@include('../../inc/esop/nav.html')
+      <section class="content">
+        <header>
+          <h2>재난대응 절차<span>재난대응 프로세스</span></h2>
+        </header>
+        <div class="search_area">
+          <ul class="search_lst">
+            <li><label for="">협업기능</label><select name="" id=""><option value="">전체</option></select></li>
+            <li><label for="">주관부서</label><select name="" id=""><option value="">전체</option></select></li>
+            <li><label for="">지원부서</label><select name="" id=""><option value="">전체</option></select></li>
+            <li><label for="">협업기관</label><select name="" id=""><option value="">전체</option></select></li>
+          </ul>
+          <button type="button" class="btn_blue">초기화</button>
+        </div>
+        <section class="flex_wrap">
+          <button type="button" popovertarget="p_emergencyProcess">필요자원 요청</button>
+
+
+        </section>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../../inc/esop/p_emergencyProcess.html')
+@@include('../../inc/script.html')
+</body>
+</html>

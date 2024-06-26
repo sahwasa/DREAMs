@@ -1,0 +1,169 @@
+@@include('../../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container esop">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>e-SOP</li>
+          </ul>
+        </section>
+        <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
+      </header>
+      @@include('../../inc/esop/nav.html')
+      <section class="content esop_main">
+        <section>          
+          <article class="flood_status">
+            <header class="tit">
+              <h1>경보단계</h1>              
+            </header>
+            <!-- step1:관심,step2:주의,step3:경계,step4:심각
+            
+             -->
+            <div class="dtl step4">
+              <p class="blind">주의 단계</p>
+            </div>            
+          </article>
+          <article class="weather_advisory">
+            <header class="tit">
+              <h1>기상특보</h1>              
+            </header>
+            <figure>
+              <figcaption>2023년 7월 15일 17:00 이후</figcaption>
+              <img src="http://placehold.it/295x244" alt="">
+            </figure>
+          </article>
+          <article class="heavy_rain">
+            <div>
+              <header class="tit">
+                <h1>기상청 호우예측</h1>              
+              </header>
+              <!-- 
+                기본값 9(소나기)
+                class="weather1" title="맑음"
+                class="weather2" title="맑음(밤)"
+                class="weather3" title="구름 조금"
+                class="weather4" title="구름 조금(밤)"
+                class="weather5" title="구름 많음"
+                class="weather6" title="구름 많음(밤)"
+                class="weather7" title="흐림"
+                class="weather8" title="낙뢰와 비"
+                class="weather9" title="소나기"
+                class="weather10" title="한때 비"
+                class="weather11" title="눈"
+                class="weather12" title="한때 눈"
+                class="weather13" title="빗방울"
+                class="weather14" title="눈날림"
+                class="weather15" title="낙뢰"
+                class="weather16" title="안개"
+                class="weather1" title="맑음"
+                class="weather2" title="맑음(밤)"
+              -->
+              <ul>
+                <li class="weather10"><em>1</em>시간 <em>0</em>㎜</li>
+                <li><em>3</em>시간 <em>0</em>㎜</li>
+                <li><em>12</em>시간 <em>0</em>㎜</li>
+              </ul>         
+            </div>
+            <div class="devide">
+              <header class="tit">
+                <h1>삼척시 호우예측</h1>
+              </header>
+              <ul>
+                <li><em>1</em>시간 <em>0</em>㎜</li>
+                <li><em>3</em>시간 <em>0</em>㎜</li>
+                <li><em>12</em>시간 <em>0</em>㎜</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section>
+          <article class="gis_wrap">
+            <header class="tit">
+              <h1>도시침수 예상지역</h1>
+            </header>
+            <div class="gis">
+            </div>
+          </article>
+          <article>
+            <header class="tit">
+              <h1>재난대응 프로세스</h1>
+            </header>
+            <div class="tbl_wrap">
+              <table class="tbl_lst">
+                <thead>
+                  <tr>
+                    <th scope="col">전체</th>
+                    <th scope="col">조치 전</th>
+                    <th scope="col">조치 중</th>
+                    <th scope="col">조치 완료</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>12</td>
+                    <td>34</td>
+                    <td>56</td>
+                    <td>78</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+        <section>
+          <article>
+            <header class="tit">
+              <h1>재난상황전파 및 대응상황보고</h1>
+            </header>
+            <div class="tbl_wrap">
+              <table class="tbl_lst">
+                <thead>
+                  <tr>
+                    <th scope="col">재난상황전파 중</th>
+                    <th scope="col">대응상황보고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>56</td>
+                    <td>78</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article>
+            <header class="tit">
+              <h1>조치결과 체크리스트</h1>
+            </header>
+            <div class="tbl_wrap">
+              <table class="tbl_lst">
+                <thead>
+                  <tr>
+                    <th scope="col">상황전파 및 보고</th>
+                    <th scope="col">체크리스트</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>56</td>
+                    <td>78</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../../inc/script.html')
+<script src="../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../js/chart_temp.js"></script>
+<script src="../js/monitoring.js"></script>
+</body>
+</html>

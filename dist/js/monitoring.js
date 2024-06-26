@@ -11,10 +11,10 @@ const temp_map = document.querySelector('#temp_map');
 const pipe = document.querySelector('.pipe');
 
 const map_url = {
-  manhole : '../images/temp/map-manhole.png',
-  pipe : '../images/temp/map-pipe.png',
-  pnm : '../images/temp/map-pnm.png',
-  default : '../images/temp/map-default.png'
+  manhole : '../../images/temp/map-manhole.png',
+  pipe : '../../images/temp/map-pipe.png',
+  pnm : '../../images/temp/map-pnm.png',
+  default : '../../images/temp/map-default.png'
 }
 const types = (event) =>{
   const checkbox = event.target,

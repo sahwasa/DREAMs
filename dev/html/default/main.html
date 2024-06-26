@@ -1,6 +1,6 @@
-@@include('../inc/top.html')
+@@include('../../inc/top.html')
 <div id="wrap" class="wrap">
-  @@include('../inc/header.html')    
+  @@include('../../inc/header.html')    
   <main id="content" class="main_container">
     <section class="pannel">
       <div class="pannel_wrap">
@@ -15,7 +15,7 @@
         </div>
         <div class="pannel_body">
           <ul class="place_lst">
-            <li class="grade4" tabindex="0" onclick="location.href='../html/flood_risk.html?index=1,1'">
+            <li class="grade4" tabindex="0" onclick="location.href='../default/flood_risk.html?index=1,1'">
               <strong>침수위험</strong>
               <ul class="dot_lst">
                 <li><em>담당자</em>홍길동</li>
@@ -53,7 +53,7 @@
     </section>
     <section class="map_wrap">
       <div class="temp_map">
-        <img src="../images/temp/map-default.png" id="temp_map" width="100%" height="auto" alt="임시 지도배경">
+        <img src="../../images/temp/map-default.png" id="temp_map" width="100%" height="auto" alt="임시 지도배경">
       </div>
       <div class="map_ctrl">        
         <ul class="map_tool">
@@ -73,7 +73,7 @@
         </ul>
         <div class="map_layer">
           <button type="button" onclick="toggle('.p_forecast');" class="btn_forecast weather1">23℃ 맑음</button>
-          @@include('../inc/pop/p_forecast.html')
+          @@include('../../inc/pop/p_forecast.html')
           <button type="button" class="btn_radar" onclick="document.querySelector('.p_forecast').close();">레이더</button>
         </div>
         <ul class="map_style btn_switch">
@@ -118,9 +118,9 @@
     </section>
   </main>
 </div>
-@@include('../inc/script.html')
-<script src="../plugins/chart.js/dist/chart.umd.js"></script>
-<script src="../js/chart_temp.js"></script>
-<script src="../js/monitoring.js"></script>
+@@include('../../inc/script.html')
+<script src="../../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../../js/chart_temp.js"></script>
+<script src="../../js/monitoring.js"></script>
 </body>
 </html>

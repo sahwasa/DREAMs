@@ -1,0 +1,96 @@
+@@include('../../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container esop">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">침수관리 종합 정보</a></li>
+            <li><a href="#">e-SOP</a></li>
+            <li><a href="#">위기 경보</a></li>
+            <li>위기 경보</li>
+          </ul>
+        </section>
+        <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
+      </header>
+      @@include('../../inc/esop/nav.html')
+      <section class="content">
+        <header>
+          <h2>위기 경보<span>위기 경보</span></h2>
+        </header>
+        <section class="tbl_wrap">          
+          <table class="tbl_lst tbl_crisis_alert">
+            <thead>
+              <tr>
+                <th scope="col">종류</th>
+                <th scope="col">판단 기준</th>
+                <th scope="col">주요 활동</th>
+                <th scope="col">비상 단계</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">관심</th>
+                <td>
+                  <ul class="dot_lst">
+                    <li>태풍 빈발 시기</li>
+                    <li>우리나라에 영향을 끼칠 가능성이 있는 태풍의 발생</li>
+                    <li>호우·대설·해일 빈발 시기</li>
+                  </ul>
+                </td>
+                <td>
+                  징후활동 감시 (대비업무 수행),<br/>공동 대응체계 구축지시
+                </td>
+                <td>사전 대비단계</td>
+              </tr>
+              <tr>
+                <th scope="row">주의</th>
+                <td>
+                  <ul class="dot_lst">
+                    <li>태풍 예비특보 또는 태풍주의보가 발령되고 태풍에 의한 대규모 재난이 발생할 가능성이 나타날 때</li>
+                    <li>호우·대설·해일 예비특보 또는 호우·대설·해일주의보가 발령되고 호우·대설·해일에 의한 대규모 재난이 발생할 가능성이 나타날 때</li>
+                  </ul>
+                </td>
+                <td>
+                  협조체제 가동,<br/>공동 대응체계 구축지시
+                </td>
+                <td>비상 1단계</td>
+              </tr>
+              <tr>
+                <th scope="row">경계</th>
+                <td>
+                  <ul class="dot_lst">
+                    <li>태풍경보가 발령되고 태풍에 의한 대규모 재난이 발생할 가능성이 농후할 때</li>
+                    <li>호우·대설·해일경보가 발령되고 호우·대설·해일에 의한 대규모 재난이 발생할 가능성이 농후할 때</li>
+                  </ul>
+                </td>
+                <td>
+                  대비계획 점검 (대형사고로 피해확대 우려),<br/>공동 대응체계 가동
+                </td>
+                <td>비상 2단계</td>
+              </tr>
+              <tr>
+                <th scope="row">심각</th>
+                <td>
+                  <ul class="dot_lst">
+                    <li>태풍경보가 발령되고 태풍에 의한 대규모 재난이 발생하였거나 발생할 가능성이 확실 할 때</li>
+                    <li>호우·대설·해일경보가 발령되고 호우·대설·해일에 의한 대규모 재난이 발생하였거나 발생할 가능성이 확실할 때</li>
+                  </ul>
+                </td>
+                <td>
+                  즉각 대응태세 돌입 (대형사고),,<br/>공동 대응체계 가동 강화
+                </td>
+                <td>비상 3단계</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../../inc/script.html')
+</body>
+</html>

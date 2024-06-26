@@ -1,0 +1,94 @@
+@@include('../../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container esop">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">침수관리 종합 정보</a></li>
+            <li><a href="#">e-SOP</a></li>
+            <li><a href="#">위기 경보</a></li>
+            <li>재난대응 단계도</li>
+          </ul>
+        </section>
+        <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
+      </header>
+      @@include('../../inc/esop/nav.html')
+      <section class="content">
+        <header>
+          <h2>재난대응 단계도<span>위기 경보</span></h2>
+        </header>
+        <section class="tbl_wrap">
+          <div class="top_wrap">
+            <span class="right">
+              <button type="button" class="btn_add">저장</button>
+            </span>
+          </div>
+          <table class="tbl_lst tbl_withEditor">
+            <thead>
+              <tr>
+                <th scope="col">구분</th>
+                <th scope="col">상황</th>
+                <th scope="col">대응지침</th>
+                <th scope="col">위기경보</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">징후감지</th>
+                <td><div contenteditable="true">태풍정보 발생, 호우·대설 예비특보 발표로 피해 발생 가능성이 있는 단계</div></td>
+                <td><div contenteditable="true">- 초기 상황판단회의 개최<br/>- 풍수해 취약지역 사전대피, 접근통제 등 안전조치<br/>- 지역대책본부 비상근무 실시</div></td>
+                <td><ul class="check_lst">
+                    <li><label for="r1-1"><input type="checkbox" id="r1-1" name="r1">관심</label></li>
+                    <li><label for="r1-2"><input type="checkbox" id="r1-2" name="r1">주의</label></li>
+                    <li><label for="r1-3"><input type="checkbox" id="r1-3" name="r1">경계</label></li>
+                    <li><label for="r1-4"><input type="checkbox" id="r1-4" name="r1">심각</label></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <th scope="row">초기대응</th>
+                <td><div contenteditable="true">태풍정보 발생, 호우·대설 예비특보 발표로 피해 발생 가능성이 있는 단계</div></td>
+                <td><div contenteditable="true">- 초기 상황판단회의 개최<br/>- 풍수해 취약지역 사전대피, 접근통제 등 안전조치<br/>- 지역대책본부 비상근무 실시</div></td>
+                <td><ul class="check_lst">
+                    <li><label for="r2-1"><input type="checkbox" id="r2-1" name="r2">관심</label></li>
+                    <li><label for="r2-2"><input type="checkbox" id="r2-2" name="r2">주의</label></li>
+                    <li><label for="r2-3"><input type="checkbox" id="r2-3" name="r2">경계</label></li>
+                    <li><label for="r2-4"><input type="checkbox" id="r2-4" name="r2">심각</label></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <th scope="row">비상대응</th>
+                <td><div contenteditable="true">태풍정보 발생, 호우·대설 예비특보 발표로 피해 발생 가능성이 있는 단계</div></td>
+                <td><div contenteditable="true">- 초기 상황판단회의 개최<br/>- 풍수해 취약지역 사전대피, 접근통제 등 안전조치<br/>- 지역대책본부 비상근무 실시</div></td>
+                <td><ul class="check_lst">
+                    <li><label for="r3-1"><input type="checkbox" id="r3-1" name="r3">관심</label></li>
+                    <li><label for="r3-2"><input type="checkbox" id="r3-2" name="r3">주의</label></li>
+                    <li><label for="r3-3"><input type="checkbox" id="r3-3" name="r3">경계</label></li>
+                    <li><label for="r3-4"><input type="checkbox" id="r3-4" name="r3">심각</label></li>
+                  </ul></td>
+              </tr>
+              <tr>
+                <th scope="row">수습복구</th>
+                <td><div contenteditable="true">태풍정보 발생, 호우·대설 예비특보 발표로 피해 발생 가능성이 있는 단계</div></td>
+                <td><div contenteditable="true">- 초기 상황판단회의 개최<br/>- 풍수해 취약지역 사전대피, 접근통제 등 안전조치<br/>- 지역대책본부 비상근무 실시</div></td>
+                <td>
+                  <ul class="check_lst">
+                    <li><label for="r4-1"><input type="checkbox" id="r4-1" name="r4">관심</label></li>
+                    <li><label for="r4-2"><input type="checkbox" id="r4-2" name="r4">주의</label></li>
+                    <li><label for="r4-3"><input type="checkbox" id="r4-3" name="r4">경계</label></li>
+                    <li><label for="r4-4"><input type="checkbox" id="r4-4" name="r4">심각</label></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../../inc/script.html')
+</body>
+</html>

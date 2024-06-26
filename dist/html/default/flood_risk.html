@@ -1,6 +1,56 @@
-@@include('../inc/top.html')
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="icon" href="../../images/favicon.png" type="image/x-icon" />
+  <title>내 · 외배수 관리 · 운영 지원 시스템</title>
+  <link rel="stylesheet" href="../../font/fontello/css/fontello.css">
+  <link rel="stylesheet" href="../../css/cmmn.css">
+  <link rel="stylesheet" href="../../css/pop.css">
+</head>
+<body>
+
 <div id="wrap" class="wrap">
-  @@include('../inc/header.html')    
+  <header class="header">
+  <h1>
+    <span class="author">행정안전부</span>
+    <a href=""><em>내 · 외배수</em> 관리 · 운영 지원 시스템</a>
+  </h1>
+  <div class="util">
+    <b class="account">시스템 운영자님</b>
+    <ul class="my_svc">
+      <li><button type="button">내 정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+    </ul>
+  </div>
+  <nav class="nav">
+    <ul class="nav_lst">
+      <li><a href="../default/main.html">침수관리 종합 정보</a>
+        <ul class="sub">
+          <li><a href="../default/main.html">실시간 모니터링</a></li>
+          <li><a href="../esop/main.html">e-SOP</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/default/infra_sensor.html">활용 인프라 관리</a>
+        <ul class="sub">
+          <li><a href="../default/infra_sensor.html">IOT 센서</a></li>
+          <li><a href="../default/infra_manhole.html">맨홀</a></li>
+          <li><a href="../default/infra_pipe.html">관로</a></li>
+          <li><a href="../default/infra_cctv.html">CCTV</a></li>
+        </ul>
+      </li>
+      <li><a href="../default/admin_user.html">시스템 관리</a>
+        <ul class="sub">
+          <li><a href="../default/admin_user.html">사용자관리</a></li>
+          <li><a href="../default/admin_code.html">코드 관리</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <footer class="footer">Copyright ⓒ 행정안전부. All right reserved.</footer>  
+</header>    
   <main id="content" class="main_container">
     <section class="pannel">
       <div class="pannel_wrap">
@@ -78,7 +128,7 @@
     <div class="flood_risk">
       <section class="map_wrap">
         <div class="temp_map">
-          <img src="../images/temp/map-flood.png" id="temp_map" width="100%" height="auto" alt="임시 지도배경">
+          <img src="../../images/temp/map-flood.png" id="temp_map" width="100%" height="auto" alt="임시 지도배경">
         </div>
         <div class="map_ctrl">        
           <ul class="map_tool">
@@ -98,7 +148,96 @@
           </ul>
           <div class="map_layer">
             <button type="button" onclick="toggle('.p_forecast');" class="btn_forecast weather1">23℃ 맑음</button>
-            @@include('../inc/pop/p_forecast.html')
+            <dialog class="p_forecast" style="--width:1000px">
+  <form method="dialog">
+    <header class="tit tab_wrap">
+      <ul class="tab">
+        <li><a href="#tab01">동네예보</a></li>
+        <li><a href="#tab02">AWS</a></li>
+      </ul>
+      <div class="tool">
+        <em>경기도 용인시 처인구</em>
+        <b class="date">2023.10.10</b>
+      </div>
+    </header>
+    <div class="tab_container">
+      <section id="tab01" class="tab_contents">
+        <div class="tbl_wrap">
+          <table class="tbl_weather head">
+            <tr><th scope="row">시간</th></tr>
+            <tr><th scope="row">날씨</th></tr>
+            <tr><th scope="row">강수</th></tr>
+            <tr><th scope="row">습도</th></tr>
+            <tr><th scope="row">바람</th></tr>
+          </table>
+          <div class="tbl_scroll_x">
+            <table class="tbl_weather">
+              <tr class="times">
+                <td data-date="10일(화)">07시</td><td>08시</td><td>09시</td><td>10시</td><td>11시</td><td>12시</td><td>13시</td><td>14시</td><td>15시</td><td>16시</td><td>17시</td><td>18시</td><td>19시</td><td>20시</td><td>21시</td><td>22시</td><td>23시</td><td data-date="11일(수)">0시</td><td>01시</td><td>02시</td><td>03시</td>
+              </tr>
+              <tr class="temp">
+                <td colspan="18">
+                  <div class="chart_wrap">
+                    <canvas id="chart_temp"></canvas>
+                  </div>
+                </td>              
+              </tr>
+              <tr class="weathers">
+                <td><i class="weather1" title="맑음"></i></td>
+                <td><i class="weather2" title="맑음(밤)"></i></td>
+                <td><i class="weather3" title="구름 조금"></i></td>
+                <td><i class="weather4" title="구름 조금(밤)"></i></td>
+                <td><i class="weather5" title="구름 많음"></i></td>
+                <td><i class="weather6" title="구름 많음(밤)"></i></td>
+                <td><i class="weather7" title="흐림"></i></td>
+                <td><i class="weather8" title="낙뢰와 비"></i></td>
+                <td><i class="weather9" title="소나기"></i></td>
+                <td><i class="weather10" title="한때 비"></i></td>
+                <td><i class="weather11" title="눈"></i></td>
+                <td><i class="weather12" title="한때 눈"></i></td>
+                <td><i class="weather13" title="빗방울"></i></td>
+                <td><i class="weather14" title="눈날림"></i></td>
+                <td><i class="weather15" title="낙뢰"></i></td>
+                <td><i class="weather16" title="안개"></i></td>
+                <td><i class="weather1" title="맑음"></i></td>
+                <td><i class="weather2" title="맑음(밤)"></i></td>
+              </tr>
+              <tr class="precipitation">
+                <td><i style="--val:0;"></i>-</td>
+                <td><i style="--val:0;"></i>-</td>
+                <td><i style="--val:0;"></i>-</td>
+                <td><i style="--val:20;"></i>20%</td>
+                <td><i style="--val:70;"></i>70%</td>
+                <td><i style="--val:80;"></i>80%</td>
+                <td><i style="--val:100;"></i>100%</td>
+              </tr>
+              <tr class="humidity">
+                <td><p style="--val:90;">90</p></td>
+                <td><p style="--val:90;">90</p></td>
+                <td><p style="--val:90;">90</p></td>
+                <td><p style="--val:100;">100</p></td>
+                <td><p style="--val:80;">80</p></td>
+                <td><p style="--val:80;">80</p></td>
+                <td><p style="--val:80;">80</p></td>
+              </tr>
+              <tr class="winds">
+                <td><i class="wind1" title="북서풍"></i>북서풍</td>
+                <td><i class="wind2" title="북풍"></i>북풍</td>
+                <td><i class="wind3" title="북동풍"></i>북동풍</td>
+                <td><i class="wind4" title="동풍"></i>동풍</td>
+                <td><i class="wind5" title="남동풍"></i>남동풍</td>
+                <td><i class="wind6" title="남풍"></i>남풍</td>
+                <td><i class="wind7" title="남서풍"></i>남서풍</td>
+                <td><i class="wind8" title="서풍"></i>서풍</td>
+              </tr>
+            </table>        
+          </div>
+        </div>
+      </section>
+      <section class="tab_contents"></section>    
+    </div>
+  </form>
+</dialog>
             <button type="button" class="btn_radar" onclick="document.querySelector('.p_forecast').close();">레이더</button>
           </div>
           <ul class="map_style btn_switch">
@@ -205,7 +344,16 @@
               </div>
             </details>
           </div>
-          @@include('../inc/playbar.html')
+          <div class="progress">              
+  <ul class="remote">
+    <li><button type="button" class="play">재생</button> </li>
+    <!-- <li><button type="button" class="pause">일시정지</button></li> -->
+    <li><button type="button" class="stop">정지</button> </li>
+  </ul>
+  <div id="playbar" class="playbar">
+    <div id="pct" class="pct" style="--w:21;" data-value="AM 10:00"></div>
+  </div>
+</div> 
         </div>
       </section>
       <section class="dtl_info">
@@ -249,11 +397,17 @@
     </div>
   </main>
 </div>
-@@include('../inc/script.html')
-<script src="../plugins/chart.js/dist/chart.umd.js"></script>
-<script src="../js/chart_temp.js"></script>
-<script src="../js/chart_flood.js"></script>
-<script src="../js/monitoring.js"></script>
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../../plugins/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
+<script src="../../js/ui_cmmn.js"></script>
+<script>
+  commonInit();
+</script>
+<script src="../../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../../js/chart_temp.js"></script>
+<script src="../../js/chart_flood.js"></script>
+<script src="../../js/monitoring.js"></script>
 <script>
 //maker 툴팁
 
