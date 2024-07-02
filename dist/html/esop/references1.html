@@ -57,7 +57,10 @@
         <section class="bredcrumb">
           <ul>
             <li><a href="#">Home</a></li>
-            <li>e-SOP</li>
+            <li><a href="#">침수관리 종합 정보</a></li>
+            <li><a href="#">e-SOP</a></li>
+            <li><a href="#">관련서식 및 부록</a></li>
+            <li>관련서식</li>
           </ul>
         </section>
         <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
@@ -118,10 +121,66 @@
   </ul>
 </nav>
       <section class="content">
+        <header>
+          <h2>관련서식<span>관련서식 및 부록</span></h2>
+          <div class="tool">
+            <button type="button" class="btn_edit" popovertarget="p_add_form">등록</button>
+          </div>
+        </header>
+        <section class="tbl_wrap tbl_scroll">
+          <table class="tbl_lst">
+            <caption>관련서식</caption>
+            <thead>
+              <tr>
+                <th scope="col">서식 구분</th>
+                <th scope="col">서식 제목</th>
+                <th scope="col">서식 첨부</th>
+                <th scope="col">관리</th>
+              </tr>
+            </thead>
+            <tbody>              
+              <tr>
+                <td>제1호 서식</td>             
+                <td>사고 현장 종합상황 보고서</td>             
+                <td><a href="#" download><i class="download"></i>제1호서식.hwp</a></td>             
+                <td>
+                  <button type="button" class="btn_modify">수정</button>
+                  <button type="button" class="btn_delete">삭제</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>        
       </section>
     </div>
   </main>
 </div>
+<dialog id="p_add_form" style="--width:500px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>관련 서식 추가</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_add_form" popoveraction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="ipt_lst dot_lst">
+        <li><label for="" class="required">구분</label><input type="text" id="" /></li>
+        <li><label for="" class="required">제목</label><input type="text" id="" /></li>
+        <li><label for="" class="required">첨부</label>
+          <div class="file_ipt">
+            <input type="text" id="" name="" class="file_text" readonly="" role="filePath" title="첨부폴더 경로" placeholder="부록 첨부">              
+            <span class="file_wrap btn_blue_line">파일선택</span>
+            <input type="file" role="fileAdd" class="file_add">
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray"  popovertarget="p_add_form" popoveraction="hide">취소</button>
+    </section>
+  </form>
+</dialog>
 <script src="../../plugins/jquery.min.js"></script>
 <script src="../../plugins/chart.js/dist/chart.umd.js"></script>
 <script src="../../plugins/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>

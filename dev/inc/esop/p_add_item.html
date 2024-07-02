@@ -1,0 +1,44 @@
+<dialog id="p_add_item" style="--width:800px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>보고서 항목 입력</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_add_item" popoveraction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <div class="tbl_wrap">
+        <div class="top_wrap">
+          <span class="right">
+            <button type="button" class="btn_add" popovertarget="p_add_emergencyContacts">추가</button>
+          </span>
+        </div>
+        <table class="tbl_lst">
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">입력 항목</th>
+              <th scope="col">삭제</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td><input type="text" title="입력 항목" class="full" placeholder="내용을 입력해주세요." value="1. 침수 발생 일자 및 시간?"></td>
+              <td><button type="button" class="btn_delete">삭제</button></td>
+            </tr>          
+            <tr>
+              <th scope="row">2</th>
+              <td><input type="text" title="입력 항목" class="full" placeholder="내용을 입력해주세요."></td>
+              <td><button type="button" class="btn_delete">삭제</button></td>
+            </tr>          
+          </tbody>
+        </table>
+      </div>    
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray"  popovertarget="p_add_item" popoveraction="hide">취소</button>
+    </section>
+  </form>
+</dialog>

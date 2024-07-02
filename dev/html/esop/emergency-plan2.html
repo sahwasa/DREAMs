@@ -18,7 +18,7 @@
       @@include('../../inc/esop/nav.html')
       <section class="content">
         <header>
-          <h2>재난대응 절차<span>재난대응 프로세스</span></h2>
+          <h2>재난대응 프로세스<span>재난대응 절차</span></h2>
         </header>
         <div class="search_area">
           <ul class="search_lst">
@@ -29,10 +29,116 @@
           </ul>
           <button type="button" class="btn_blue">초기화</button>
         </div>
-        <section class="flex_wrap">
-          <button type="button" popovertarget="p_emergencyProcess">필요자원 요청</button>
-
-
+        <section class="step">          
+          <section class="ietm">
+            <header><h1>1단계 징후 감지</h1></header>
+            <div class="status_wrap">
+              <ul>
+                <li><label for="status1-1">관심</label><input type="checkbox" id="status1-1" disabled checked></li>
+                <li><label for="status1-2">주의</label><input type="checkbox" id="status1-2" disabled checked></li>
+                <li><label for="status1-3">경계</label><input type="checkbox" id="status1-3" disabled></li>
+                <li><label for="status1-4">심각</label><input type="checkbox" id="status1-4" disabled></li>
+              </ul>
+            </div>
+            <div class="lst_wrap">
+              <!-- 원형 아이콘이 뭘 의미하는지 알 수가없네요;; 기존에 사용하던 배열이 있어 그냥 사용했습니다-->
+              <!-- .i_default:초록,.i_delay:노랑,.i_error:빨강 -->
+              <dl>
+                <dt>[1]징후접수 및 파악</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess" class="i_default">[1-1]징후 접수</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess" class="i_delay">[1-2]징후 파악</button></dd>
+                <dt>[2]징후전파 및 보고</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess" class="i_error">[2-1]징후 전파</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[2-2]징후 보고</button></dd>
+                <dt>[3]징후대응</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[3-1]징후 확인 및 평가</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[3-2]긴급대응조치</button></dd>
+              </dl>
+            </div>
+          </section>
+          <section class="ietm">
+            <header><h1>2단계 초기 대응</h1></header>
+            <div class="status_wrap">
+              <ul>
+                <li><label for="status2-1">관심</label><input type="checkbox" id="status2-1" disabled checked></li>
+                <li><label for="status2-2">주의</label><input type="checkbox" id="status2-2" disabled checked></li>
+                <li><label for="status2-3">경계</label><input type="checkbox" id="status2-3" disabled></li>
+                <li><label for="status2-4">심각</label><input type="checkbox" id="status2-4" disabled></li>
+              </ul>
+            </div>
+            <div class="lst_wrap">
+              <dl>
+                <dt>[4]상황접수 및 파악</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[4-1]상황 접수</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[4-2]상황 파악</button></dd>
+                <dt>[5]상황전파 및 보고</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[5-1]상황 전파</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[5-2]상황 보고</button></dd>
+                <dt>[6]현장출동 및 초기대응 조치</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[6-1]현장 출동 지시 및 요청</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[6-2]긴급 현장 지원 요청</button></dd>
+                <dt>[7]재난안전상황실 (지대본 상황실) 가동</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[7-2]상황보고서 작성 및 전파</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[7-3]재난상황 수시 보고 및 전파-공유</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[7-4]필요 자원 파악 및 지원 요청</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[7-5]상황판단회의 개최</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[7-8]주요인사 상황실 방문시 브리핑</button></dd>
+                <dt>[15]긴급통신지원 및 복구 요청</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[15-1]긴급통신 지원</button></dd>
+                <dt>[16]시설응급복구</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[16-2]응급복구 장비 보유현황 파악</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[16-3]응급복구 지원 준비 요청</button></dd>
+              </dl>
+            </div>
+          </section>
+          <section class="ietm">
+            <header><h1>3단계 비상 대응</h1></header>
+            <div class="status_wrap">
+              <ul>
+                <li><label for="status3-1">관심</label><input type="checkbox" id="status3-1" disabled></li>
+                <li><label for="status3-2">주의</label><input type="checkbox" id="status3-2" disabled></li>
+                <li><label for="status3-3">경계</label><input type="checkbox" id="status3-3" disabled checked></li>
+                <li><label for="status3-4">심각</label><input type="checkbox" id="status3-4" disabled checked></li>
+              </ul>
+            </div>
+            <div class="lst_wrap">
+              <dl>
+                <dt>[1]징후접수 및 파악</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[1-1]징후 접수</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[1-2]징후 파악</button></dd>
+                <dt>[2]징후전파 및 보고</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[2-1]징후 전파</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[2-2]징후 보고</button></dd>
+                <dt>[3]징후대응</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[3-1]징후 확인 및 평가</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[3-2]긴급대응조치</button></dd>
+              </dl>
+            </div>
+          </section>
+          <section class="ietm">
+            <header><h1>4단계 수습 복구</h1></header>
+            <div class="status_wrap">
+              <ul>
+                <li><label for="status4-1">관심</label><input type="checkbox" id="status4-1" disabled></li>
+                <li><label for="status4-2">주의</label><input type="checkbox" id="status4-2" disabled></li>
+                <li><label for="status4-3">경계</label><input type="checkbox" id="status4-3" disabled checked></li>
+                <li><label for="status4-4">심각</label><input type="checkbox" id="status4-4" disabled checked></li>
+              </ul>
+            </div>
+            <div class="lst_wrap">
+              <dl>
+                <dt>[1]징후접수 및 파악</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[1-1]징후 접수</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[1-2]징후 파악</button></dd>
+                <dt>[2]징후전파 및 보고</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[2-1]징후 전파</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[2-2]징후 보고</button></dd>
+                <dt>[3]징후대응</dt>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[3-1]징후 확인 및 평가</button></dd>
+                <dd><button type="button" popovertarget="p_emergencyProcess">[3-2]긴급대응조치</button></dd>
+              </dl>
+            </div>
+          </section>
         </section>
       </section>
     </div>

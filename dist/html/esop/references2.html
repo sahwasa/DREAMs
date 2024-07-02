@@ -59,8 +59,8 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">침수관리 종합 정보</a></li>
             <li><a href="#">e-SOP</a></li>
-            <li><a href="#">재난대응 프로세스 관리</a></li>
-            <li>관련부록</li>
+            <li><a href="#">관련서식 및 부록</a></li>
+            <li>재개정 이력</li>
           </ul>
         </section>
         <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
@@ -122,64 +122,57 @@
 </nav>
       <section class="content">
         <header>
-          <h2>관련부록<span>재난대응 프로세스 관리</span></h2>
+          <h2>재개정 이력<span>관련서식 및 부록</span></h2>
           <div class="tool">
-            <button type="button" class="btn_add" popovertarget="p_add_appendices">등록</button>
+            <button type="button" class="btn_edit" popovertarget="p_add_correction">등록</button>
           </div>
-        </header>        
-        <div class="tbl_wrap">         
-          <div class="tbl_scroll">
-            <table class="tbl_lst">
-              <caption>비상 연락망</caption>
-              <thead>
-                <tr>
-                  <th scope="col">구분</th>
-                  <th scope="col">제목</th>
-                  <th scope="col">첨부</th>
-                  <th scope="col">관리</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Admin</td>
-                  <td>2020-07-07</td>
-                  <td>2020-07-07</td>
-                  <td>
-                    <button type="button" class="btn_delete" title="삭제">삭제</button>
-                  </td>
-                </tr>              
-              </tbody>
-            </table>
-          </div>
-        </div>
+        </header>
+        <section class="tbl_wrap tbl_scroll">
+          <table class="tbl_lst">
+            <caption>재개정 이력</caption>
+            <thead>
+              <tr>
+                <th scope="col">일자(승인)</th>
+                <th scope="col">주요 개정 내용</th>
+                <th scope="col">개정 사유</th>
+                <th scope="col">담당자</th>
+                <th scope="col">협의기관</th>
+              </tr>
+            </thead>
+            <tbody>              
+              <tr>
+                <td>2024-05-27</td>             
+                <td>위기관리 커뮤니케이션 매뉴얼 반영</td>
+                <td>위기관리 표준매뉴얼 작성기준</td>
+                <td>홍길동</td>
+                <td>시스템</td>
+              </tr>
+            </tbody>
+          </table>        
       </section>
     </div>
   </main>
 </div>
-<dialog id="p_add_appendices" style="--width:500px" popover="manual">
+<dialog id="p_add_correction" style="--width:500px" popover="manual">
   <form method="dialog">
     <header class="p_header tit">
-      <h1>관련 부록 추가</h1>
+      <h1>재개정 이력 등록</h1>
       <div class="tool">
-        <button type="button" class="btn_close" popovertarget="p_add_appendices" popoveraction="hide">닫기</button>
+        <button type="button" class="btn_close" popovertarget="p_add_correction" popoveraction="hide">닫기</button>
       </div>
     </header>
     <section class="p_body">
       <ul class="ipt_lst dot_lst">
-        <li><label for="" class="required">구분</label><input type="text" id="" /></li>
-        <li><label for="" class="required">제목</label><input type="text" id="" /></li>
-        <li><label for="" class="required">첨부</label>
-          <div class="file_ipt">
-            <input type="text" id="" name="" class="file_text" readonly="" role="filePath" title="첨부폴더 경로" placeholder="부록 첨부">              
-            <span class="file_wrap btn_blue_line">파일선택</span>
-            <input type="file" role="fileAdd" class="file_add">
-          </div>
-        </li>
+        <li><label for="" class="required">일자(승인)</label><input type="date" id="" /></li>
+        <li><label for="" class="required">주요 개정 내용</label><input type="text" id="" /></li>
+        <li><label for="" class="required">개정 사유</label><input type="text" id="" /></li>
+        <li><label for="" class="required">담당자</label><input type="text" id="" /></li>
+        <li><label for="" class="required">협의기관</label><input type="text" id="" /></li>
       </ul>
     </section>
     <section class="p_foot">
       <button type="submit" class="btn_blue">저장</button>
-      <button type="button" class="btn_gray"  popovertarget="p_add_appendices" popoveraction="hide">취소</button>
+      <button type="button" class="btn_gray"  popovertarget="p_add_correction" popoveraction="hide">취소</button>
     </section>
   </form>
 </dialog>

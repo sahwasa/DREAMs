@@ -59,8 +59,8 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">침수관리 종합 정보</a></li>
             <li><a href="#">e-SOP</a></li>
-            <li><a href="#">부서별 협업기능</a></li>
-            <li>부서별 협업기능</li>
+            <li><a href="#">재난대응 프로세스 관리</a></li>
+            <li>재난대응 프로세스 항목관리</li>
           </ul>
         </section>
         <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
@@ -122,92 +122,39 @@
 </nav>
       <section class="content">
         <header>
-          <h2>부서별 협업기능<span>부서별 협업기능</span></h2>
-        </header>
-        <div class="search_area">
-          <ul class="search_lst">
-            <li><label for="">협업기능</label><select name="" id=""><option value="">전체</option></select></li>
-            <li><label for="">주관부서</label><select name="" id=""><option value="">전체</option></select></li>
-            <li><label for="">협업기관</label><select name="" id=""><option value="">전체</option></select></li>
-          </ul>
-          <button type="button" class="btn_blue">초기화</button>
-        </div>
+          <h2>재난대응 프로세스 항목관리<span>재난대응 프로세스 관리</span></h2>
+        </header>        
         <section class="step">          
           <section class="ietm">
-            <header><h1>1단계 징후 감지</h1></header>
+            <header><h1>협업기능</h1></header>
             <div class="lst_wrap">
-              <!-- 원형 아이콘이 뭘 의미하는지 알 수가없네요;; 기존에 사용하던 배열이 있어 그냥 사용했습니다-->
-              <!-- .i_default:초록,.i_delay:노랑,.i_error:빨강 -->
-              <dl>
-                <dt>[1]징후접수 및 파악</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[1-1]징후 접수</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[1-2]징후 파악</button></dd>
-                <dt>[2]징후전파 및 보고</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[2-1]징후 전파</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[2-2]징후 보고</button></dd>
-                <dt>[3]징후대응</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[3-1]징후 확인 및 평가</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[3-2]긴급대응조치</button></dd>
-              </dl>
+              <ul>
+                <li><label for="r1-1"><input type="radio" id="r1-1" name="selectRadioLv1">재난 상황관리</label></li>
+                <li><label for="r1-2"><input type="radio" id="r1-2" name="selectRadioLv1">긴급 생활안정 지원</label></li>
+                <li><label for="r1-3"><input type="radio" id="r1-3" name="selectRadioLv1">긴급 통신지원</label></li>
+              </ul>
             </div>
           </section>
           <section class="ietm">
-            <header><h1>2단계 초기 대응</h1></header>
+            <header><h1>조치목록</h1></header>
             <div class="lst_wrap">
-              <dl>
-                <dt>[4]상황접수 및 파악</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[4-1]상황 접수</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[4-2]상황 파악</button></dd>
-                <dt>[5]상황전파 및 보고</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[5-1]상황 전파</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[5-2]상황 보고</button></dd>
-                <dt>[6]현장출동 및 초기대응 조치</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[6-1]현장 출동 지시 및 요청</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[6-2]긴급 현장 지원 요청</button></dd>
-                <dt>[7]재난안전상황실 (지대본 상황실) 가동</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[7-2]상황보고서 작성 및 전파</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[7-3]재난상황 수시 보고 및 전파-공유</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[7-4]필요 자원 파악 및 지원 요청</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[7-5]상황판단회의 개최</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[7-8]주요인사 상황실 방문시 브리핑</button></dd>
-                <dt>[15]긴급통신지원 및 복구 요청</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[15-1]긴급통신 지원</button></dd>
-                <dt>[16]시설응급복구</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[16-2]응급복구 장비 보유현황 파악</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[16-3]응급복구 지원 준비 요청</button></dd>
-              </dl>
+              <ul>
+                <li><label for="r2-1"><input type="radio" id="r2-1" name="selectRadioLv2">[11] 이재민 구호<br/>(초기 대응)</label><button type="button" class="btn_modify" title="수정">수정</button><button type="button" class="btn_delete" title="삭제">삭제</button></li>
+                <li><label for="r2-2"><input type="radio" id="r2-2" name="selectRadioLv2">[12] 경제적 지원<br/>(수습 복구)</label></li>
+                <li><label for="r2-3"><input type="radio" id="r2-3" name="selectRadioLv2">[13] 장례지원<br />(비상 대응)</label></li>
+              </ul>
+              <button type="button" class="btn_add">추가하기</button>
             </div>
           </section>
           <section class="ietm">
-            <header><h1>3단계 비상 대응</h1></header>
+            <header><h1>조치내용</h1></header>
             <div class="lst_wrap">
-              <dl>
-                <dt>[1]징후접수 및 파악</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[1-1]징후 접수</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[1-2]징후 파악</button></dd>
-                <dt>[2]징후전파 및 보고</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[2-1]징후 전파</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[2-2]징후 보고</button></dd>
-                <dt>[3]징후대응</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[3-1]징후 확인 및 평가</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[3-2]긴급대응조치</button></dd>
-              </dl>
-            </div>
-          </section>
-          <section class="ietm">
-            <header><h1>4단계 수습 복구</h1></header>
-            <div class="lst_wrap">
-              <dl>
-                <dt>[1]징후접수 및 파악</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[1-1]징후 접수</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[1-2]징후 파악</button></dd>
-                <dt>[2]징후전파 및 보고</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[2-1]징후 전파</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[2-2]징후 보고</button></dd>
-                <dt>[3]징후대응</dt>
-                <dd><button type="button" popovertarget="p_sopCollabo">[3-1]징후 확인 및 평가</button></dd>
-                <dd><button type="button" popovertarget="p_sopCollabo">[3-2]긴급대응조치</button></dd>
-              </dl>
+              <ul>
+                <li><label for="r3-1"><input type="radio" id="r3-1" name="selectRadioLv3">재난 상황관리</label></li>
+                <li><label for="r3-2"><input type="radio" id="r3-2" name="selectRadioLv3">긴급 생활안정 지원</label></li>
+                <li><label for="r3-3"><input type="radio" id="r3-3" name="selectRadioLv3">긴급 통신지원</label></li>
+              </ul>
+              <button type="button" class="btn_add">추가하기</button>
             </div>
           </section>
         </section>

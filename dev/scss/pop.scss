@@ -35,10 +35,10 @@ dialog{width:var(--width);padding:$maingap;margin:auto;border:none;box-shadow: 1
   .head{flex:0 0 36px;margin-top:28px;
     th{width:36px;font-size:12px;color:#000;border-right:1px solid $border-color;}
     tr:nth-child(1){height:47px;}
-    tr:nth-child(2){height:114.5px;}
-    tr:nth-child(3){height:83px;}
-    tr:nth-child(4){height:106px;}
-    tr:nth-child(5){height:74px;}
+    tr:nth-child(2){height:113px;}
+    tr:nth-child(3){height:82px;}
+    tr:nth-child(4){height:105px;}
+    tr:nth-child(5){height:76px;}
   }
   .tbl_weather{width:100%;table-layout:fixed;text-align:center;
     tr{border-top: 1px solid $border-color;}
@@ -108,5 +108,28 @@ dialog{width:var(--width);padding:$maingap;margin:auto;border:none;box-shadow: 1
 }
 .p_situation_report .ipt_area{border:1px solid #adadad;padding:15px;text-align:right;
   [contenteditable]{@include ipt_common;padding:10px;margin-bottom:10px;white-space:nowrap;text-align:left;}
+  button{padding:4px 24px;font-size:14px;}
 }
 [data-empty]:empty::before{content:attr(data-empty);color:$gray;}
+.process_lst{display:flex;border:1px solid #cbcbcb;margin-bottom:20px;
+  li{position:relative;flex:1;text-align:center;font-size:16px;color:#727272;font-weight:700;background-color:#e7e7ef;line-height:45px;
+    &:not(:last-child)::after{position:absolute;@include shape(33px,33px);background-color: #e7e7ef;transform:rotate(45deg);right:-16px;top:6px;border:1px solid #cbcbcb;border-width:1px 1px 0 0;z-index:5;}
+    &.on{background-color:#8988af;color:#fff;
+      &::after{background-color:#8988af;}
+    }
+  }
+}
+.p_emergencyProcess,.p_sopCollabo{
+  th{width:240px;}
+  th,td{padding:15px;
+    span{margin-right:15px;}
+    p{margin-bottom:5px;}
+  }
+  .editor_wrap{margin-top:20px;
+    @include tit_bullet('h1');
+  }
+}
+.p_SendSopList{
+  .tab_contents{height:390px;}
+  td:last-of-type{text-align:left;}
+}

@@ -10,7 +10,7 @@
             <li><a href="#">침수관리 종합 정보</a></li>
             <li><a href="#">e-SOP</a></li>
             <li><a href="#">관련서식 및 부록</a></li>
-            <li>관련서식</li>
+            <li>개정 버전관리</li>
           </ul>
         </section>
         <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
@@ -18,31 +18,26 @@
       @@include('../../inc/esop/nav.html')
       <section class="content">
         <header>
-          <h2>관련서식<span>관련서식 및 부록</span></h2>
-          <div class="tool">
-            <button type="button" class="btn_edit" popovertarget="p_add_form">등록</button>
-          </div>
+          <h2>개정 버전관리<span>관련서식 및 부록</span></h2>
         </header>
         <section class="tbl_wrap tbl_scroll">
           <table class="tbl_lst">
-            <caption>관련서식</caption>
+            <caption>개정 버전관리</caption>
             <thead>
               <tr>
-                <th scope="col">서식 구분</th>
-                <th scope="col">서식 제목</th>
-                <th scope="col">서식 첨부</th>
+                <th scope="col">지자체</th>
+                <th scope="col">개정 버전</th>
                 <th scope="col">관리</th>
               </tr>
             </thead>
             <tbody>              
               <tr>
-                <td>제1호 서식</td>             
-                <td>사고 현장 종합상황 보고서</td>             
-                <td><a href="#" download><i class="download"></i>제1호서식.hwp</a></td>             
+                <td>삼척시</td>             
                 <td>
-                  <button type="button" class="btn_modify">수정</button>
-                  <button type="button" class="btn_delete">삭제</button>
+                  <label for="before_0"><input type="radio" id="before_0" name="51230"> 개정 전</label>
+                  <label for="after_0"><input type="radio" id="after_0" name="51230"> 개정 후</label>
                 </td>
+                <td><button type="button" class="btn_save">저장</button></td>               
               </tr>
             </tbody>
           </table>        
@@ -50,7 +45,7 @@
     </div>
   </main>
 </div>
-@@include('../../inc/esop/p_add_form.html')
+@@include('../../inc/esop/p_add_correction.html')
 @@include('../../inc/script.html')
 </body>
 </html>

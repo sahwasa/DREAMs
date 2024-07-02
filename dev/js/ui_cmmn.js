@@ -307,5 +307,5 @@ function commonInit() {
   
 }
 function openPopup(url,tit,w,h) {
-  window.open(url, tit,  `"width=${w},height=${h},toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no"`);
+  window.open(url, tit, "width="+w+",height="+h+",toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
 }

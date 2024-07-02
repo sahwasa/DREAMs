@@ -10,7 +10,7 @@
             <li><a href="#">침수관리 종합 정보</a></li>
             <li><a href="#">e-SOP</a></li>
             <li><a href="#">재난대응 프로세스 관리</a></li>
-            <li>관련부록</li>
+            <li>재난대응 프로세스 기관 관리</li>
           </ul>
         </section>
         <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
@@ -18,29 +18,28 @@
       @@include('../../inc/esop/nav.html')
       <section class="content">
         <header>
-          <h2>관련부록<span>재난대응 프로세스 관리</span></h2>
+          <h2>재난대응 프로세스 기관 관리<span>재난대응 프로세스 관리</span></h2>
           <div class="tool">
-            <button type="button" class="btn_add" popovertarget="p_add_appendices">등록</button>
+            <button type="button" class="btn_add" popovertarget="p_add_dpt">등록</button>
           </div>
         </header>        
         <div class="tbl_wrap">         
           <div class="tbl_scroll">
             <table class="tbl_lst">
-              <caption>비상 연락망</caption>
+              <caption>재난대응 프로세스 기관 관리</caption>
               <thead>
                 <tr>
-                  <th scope="col">구분</th>
-                  <th scope="col">제목</th>
-                  <th scope="col">첨부</th>
+                  <th scope="col">지자체명</th>
+                  <th scope="col">기관명</th>
                   <th scope="col">관리</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Admin</td>
-                  <td>2020-07-07</td>
-                  <td>2020-07-07</td>
+                  <td>삼척시</td>
+                  <td>KBS</td>
                   <td>
+                    <button type="button" class="btn_modify" title="수정">수정</button>
                     <button type="button" class="btn_delete" title="삭제">삭제</button>
                   </td>
                 </tr>              
@@ -52,7 +51,7 @@
     </div>
   </main>
 </div>
-@@include('../../inc/esop/p_add_appendices.html')
+@@include('../../inc/esop/p_add_dpt.html')
 @@include('../../inc/script.html')
 </body>
 </html>

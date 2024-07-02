@@ -10,7 +10,7 @@
             <li><a href="#">침수관리 종합 정보</a></li>
             <li><a href="#">e-SOP</a></li>
             <li><a href="#">관련서식 및 부록</a></li>
-            <li>관련서식</li>
+            <li>재개정 이력</li>
           </ul>
         </section>
         <h1><a href="../esop/main.html#?index=1,2">e-SOP</a><span>침수관리 종합 정보</span></h1>
@@ -18,31 +18,30 @@
       @@include('../../inc/esop/nav.html')
       <section class="content">
         <header>
-          <h2>관련서식<span>관련서식 및 부록</span></h2>
+          <h2>재개정 이력<span>관련서식 및 부록</span></h2>
           <div class="tool">
-            <button type="button" class="btn_edit" popovertarget="p_add_form">등록</button>
+            <button type="button" class="btn_edit" popovertarget="p_add_correction">등록</button>
           </div>
         </header>
         <section class="tbl_wrap tbl_scroll">
           <table class="tbl_lst">
-            <caption>관련서식</caption>
+            <caption>재개정 이력</caption>
             <thead>
               <tr>
-                <th scope="col">서식 구분</th>
-                <th scope="col">서식 제목</th>
-                <th scope="col">서식 첨부</th>
-                <th scope="col">관리</th>
+                <th scope="col">일자(승인)</th>
+                <th scope="col">주요 개정 내용</th>
+                <th scope="col">개정 사유</th>
+                <th scope="col">담당자</th>
+                <th scope="col">협의기관</th>
               </tr>
             </thead>
             <tbody>              
               <tr>
-                <td>제1호 서식</td>             
-                <td>사고 현장 종합상황 보고서</td>             
-                <td><a href="#" download><i class="download"></i>제1호서식.hwp</a></td>             
-                <td>
-                  <button type="button" class="btn_modify">수정</button>
-                  <button type="button" class="btn_delete">삭제</button>
-                </td>
+                <td>2024-05-27</td>             
+                <td>위기관리 커뮤니케이션 매뉴얼 반영</td>
+                <td>위기관리 표준매뉴얼 작성기준</td>
+                <td>홍길동</td>
+                <td>시스템</td>
               </tr>
             </tbody>
           </table>        
@@ -50,7 +49,7 @@
     </div>
   </main>
 </div>
-@@include('../../inc/esop/p_add_form.html')
+@@include('../../inc/esop/p_add_correction.html')
 @@include('../../inc/script.html')
 </body>
 </html>

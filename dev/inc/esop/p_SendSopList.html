@@ -1,0 +1,47 @@
+<dialog id="p_SendSopList" class="p_SendSopList" style="--width:600px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>상황전파</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_SendSopList" popovertargetaction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <div class="tab_wrap">
+        <ul class="tab tab_s">
+          <li><a href="#tab01">지원부서</a></li>
+          <li><a href="#tab02">주관부서</a></li>
+          <li><a href="#tab03">협업기관</a></li>
+        </ul>
+      </div>
+      <div class="tab_container">
+        <section id="tab01" class="tab_contents tbl_scroll">
+          <table class="tbl_lst">
+            <thead>
+              <tr>
+                <th scope="col"><input type="checkbox" title="전체선택"></th>
+                <th scope="col">부서명</th>
+                <th scope="col">이름</th>
+                <th scope="col">이메일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" title="줄선택"></td>
+                <td>재난안전과</td>
+                <td>담당자</td>
+                <td>abc@korea.go.kr</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="tab02" class="tab_contents tbl_scroll"></section>
+        <section id="tab03" class="tab_contents tbl_scroll"></section>
+      </div>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">전송</button>
+      <button type="button" class="btn_gray" popovertarget="p_SendSopList" popovertargetaction="hide">취소</button>
+    </section>
+  </form>
+</dialog>
