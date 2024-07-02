@@ -319,11 +319,11 @@
         </ul>
       </div>
       <div class="tab_container">
-        <section id="tab01" class="tab_contents tbl_scroll">
+        <section id="tab01" class="tab_contents tbl_wrap tbl_scroll">
           <table class="tbl_lst">
             <thead>
               <tr>
-                <th scope="col"><input type="checkbox" title="전체선택"></th>
+                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
                 <th scope="col">부서명</th>
                 <th scope="col">이름</th>
                 <th scope="col">이메일</th>
@@ -331,7 +331,13 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="checkbox" title="줄선택"></td>
+                <td><input type="checkbox" class="row_check" title="줄선택"></td>
+                <td>재난안전과</td>
+                <td>담당자</td>
+                <td>abc@korea.go.kr</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"></td>
                 <td>재난안전과</td>
                 <td>담당자</td>
                 <td>abc@korea.go.kr</td>
@@ -339,8 +345,8 @@
             </tbody>
           </table>
         </section>
-        <section id="tab02" class="tab_contents tbl_scroll"></section>
-        <section id="tab03" class="tab_contents tbl_scroll"></section>
+        <section id="tab02" class="tab_contents tbl_wrap tbl_scroll">주관부서</section>
+        <section id="tab03" class="tab_contents tbl_wrap tbl_scroll">협업기관</section>
       </div>
     </section>
     <section class="p_foot">
