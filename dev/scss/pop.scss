@@ -15,18 +15,16 @@ dialog{width:var(--width);padding:$maingap;margin:auto;border:none;box-shadow: 1
 }
 .pop_wrap .p_body{max-height:none;}
 .line_style{
-  .p_header{border-bottom:2px solid $blue;padding-bottom:10px;margin-bottom:20px;
+  .p_header{border-bottom:2px solid $periwinkle;padding-bottom:10px;margin-bottom:20px;
     h1{font-size:22px;}
     .btn_close::before{font-size:20px;}
   }
   .p_foot{margin-top:40px;}
 }
-.ipt_filter{display:flex;background-color:$lightpurple;padding:5px;margin-bottom:10px;
-  ul{display:flex;gap:15px;}
+.ipt_filter{display:flex;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid $periwinkle;
+  ul{display:flex;gap:15px;padding:0 10px;}
   li{display:flex;gap:5px;align-items:center;}
-  .label,label{color:$blue;font-weight:600;
-    &::before{content:"·";margin-right:5px;}
-  }
+  .label,label{font-weight:700;font-size:14px;}
 }
 .p_forecast{left:auto;right:-123px;top:46px;
   $border-color:#d0cdcd;

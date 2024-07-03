@@ -1,0 +1,21 @@
+<dialog id="p_add_disasterStatus" style="--width:400px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>재난상황 등록</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" popovertarget="p_add_disasterStatus" popoveraction="hide">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="ipt_lst dot_lst">
+        <li><label for="" class="required">명칭</label><input type="text" id="" placeholder="재난상황 명칭"/></li>        
+        <li><label for="" class="required">발생일시</label><input type="datetime-local" id="" placeholder="재난상황 발생일시"/></li>        
+        <li><label for="" class="required">종료일시</label><input type="datetime-local" id="" placeholder="재난상황 종료일시"/></li>        
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray"  popovertarget="p_add_disasterStatus" popoveraction="hide">취소</button>
+    </section>
+  </form>
+</dialog>

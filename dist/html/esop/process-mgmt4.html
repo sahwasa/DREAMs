@@ -139,7 +139,11 @@
             <header><h1>조치목록</h1></header>
             <div class="lst_wrap">
               <ul>
-                <li><label for="r2-1"><input type="radio" id="r2-1" name="selectRadioLv2">[11] 이재민 구호<br/>(초기 대응)</label><button type="button" class="btn_modify" title="수정">수정</button><button type="button" class="btn_delete" title="삭제">삭제</button></li>
+                <li>
+                  <label for="r2-1"><input type="radio" id="r2-1" name="selectRadioLv2">[11] 이재민 구호<br/>(초기 대응)</label>
+                  <button type="button" class="btn_modify" title="수정" popovertarget="p_modify_status">수정</button>
+                  <button type="button" class="btn_delete" title="삭제">삭제</button>
+                </li>
                 <li><label for="r2-2"><input type="radio" id="r2-2" name="selectRadioLv2">[12] 경제적 지원<br/>(수습 복구)</label></li>
                 <li><label for="r2-3"><input type="radio" id="r2-3" name="selectRadioLv2">[13] 장례지원<br />(비상 대응)</label></li>
               </ul>
@@ -162,110 +166,29 @@
     </div>
   </main>
 </div>
-<dialog id="p_sopCollabo" class="p_sopCollabo" style="--width:800px" popover="manual">
+<dialog id="p_modify_status" style="--width:600px" popover="manual">
   <form method="dialog">
     <header class="p_header tit">
-      <h1>부서별 협업기능</h1>
+      <h1>재난대응 프로세스 항목 수정</h1>
       <div class="tool">
-        <button type="button" class="btn_close" popovertarget="p_sopCollabo" popovertargetaction="hide">닫기</button>
-      </div>
-    </header>
-    <section class="p_body">      
-      <div class="tbl_wrap">
-        <div class="top_wrap">
-          <span class="right">           
-            <button type="button" class="btn_blue_line" popovertarget="p_SendSopList">상황전파</button>
-          </span>
-        </div>
-        <ul class="process_lst">
-          <li>징후감지</li><li>초기대응</li><li class="on">비상대응</li><li>수습복구</li>
-        </ul>
-        <table class="tbl_row tbl_withEditor">
-          <tr>
-            <th scope="row">조치목록</th>
-            <td>[7] 재난안전상황실 (지대본 상황실) 가동</td>
-          </tr>
-          <tr>
-            <th scope="row">조치내용</th>
-            <td>[7-8] 주요인사 상황실 방문시 브리핑</td>
-          </tr>
-          <tr>
-            <th scope="row">주관부서</th>
-            <td><span>재난안전과</span></td>
-          </tr>
-          <tr>
-            <th scope="row">지원부서</th>
-            <td><p>건강증진과, 건설과, 건축과, 교통과, 기획조정실, 문화홍보실, 보건정책과, 복지정책과, 사고수습 주관부서, 사회복지과, 산림과, 삼척경찰서, 상수도사업소, 상황실, 에너지과, 읍면동 사무소, 읍면동 주민센터, 읍면동 환경부서, 총무과, 하수도사업소, 환경과</p></td>
-          </tr>
-          <tr>
-            <th scope="row">협업기관</th>
-            <td>KBS</td>
-          </tr>         
-        </table>
-        <section class="editor_wrap">
-          <header class="tit">
-            <h1>KBS</h1>
-            <span class="right">           
-              <button type="button" class="btn_blue_line" popovertarget="p_SendSopList">행동요령 저장(관리자)</button>
-            </span>
-          </header>
-          <div>에디터영역</div>
-        </section>
-      </div>
-    </section>
-  </form>
-</dialog>
-
-<dialog id="p_SendSopList" class="p_SendSopList" style="--width:600px" popover="manual">
-  <form method="dialog">
-    <header class="p_header tit">
-      <h1>상황전파</h1>
-      <div class="tool">
-        <button type="button" class="btn_close" popovertarget="p_SendSopList" popovertargetaction="hide">닫기</button>
+        <button type="button" class="btn_close" popovertarget="p_modify_status" popoveraction="hide">닫기</button>
       </div>
     </header>
     <section class="p_body">
-      <div class="tab_wrap">
-        <ul class="tab tab_s">
-          <li><a href="#tab01">지원부서</a></li>
-          <li><a href="#tab02">주관부서</a></li>
-          <li><a href="#tab03">협업기관</a></li>
-        </ul>
-      </div>
-      <div class="tab_container">
-        <section id="tab01" class="tab_contents tbl_wrap tbl_scroll">
-          <table class="tbl_lst">
-            <thead>
-              <tr>
-                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
-                <th scope="col">부서명</th>
-                <th scope="col">이름</th>
-                <th scope="col">이메일</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="checkbox" class="row_check" title="줄선택"></td>
-                <td>재난안전과</td>
-                <td>담당자</td>
-                <td>abc@korea.go.kr</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="row_check" title="줄선택"></td>
-                <td>재난안전과</td>
-                <td>담당자</td>
-                <td>abc@korea.go.kr</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section id="tab02" class="tab_contents tbl_wrap tbl_scroll">주관부서</section>
-        <section id="tab03" class="tab_contents tbl_wrap tbl_scroll">협업기관</section>
-      </div>
+      <ul class="ipt_lst dot_lst">
+        <li>
+          <label for="" class="required">조치목록&sol;내용</label>
+          <select name="" id=""><option value="">[1]징후접수 및 파악</option></select>
+        </li>        
+        <li>
+          <label for="" class="required">재난 대응단계</label>
+          <select name="" id=""><option value="">징후감지</option></select>
+        </li>        
+      </ul>
     </section>
     <section class="p_foot">
-      <button type="submit" class="btn_blue">전송</button>
-      <button type="button" class="btn_gray" popovertarget="p_SendSopList" popovertargetaction="hide">취소</button>
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="button" class="btn_gray"  popovertarget="p_modify_status" popoveraction="hide">취소</button>
     </section>
   </form>
 </dialog>

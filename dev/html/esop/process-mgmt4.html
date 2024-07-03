@@ -35,7 +35,11 @@
             <header><h1>조치목록</h1></header>
             <div class="lst_wrap">
               <ul>
-                <li><label for="r2-1"><input type="radio" id="r2-1" name="selectRadioLv2">[11] 이재민 구호<br/>(초기 대응)</label><button type="button" class="btn_modify" title="수정">수정</button><button type="button" class="btn_delete" title="삭제">삭제</button></li>
+                <li>
+                  <label for="r2-1"><input type="radio" id="r2-1" name="selectRadioLv2">[11] 이재민 구호<br/>(초기 대응)</label>
+                  <button type="button" class="btn_modify" title="수정" popovertarget="p_modify_status">수정</button>
+                  <button type="button" class="btn_delete" title="삭제">삭제</button>
+                </li>
                 <li><label for="r2-2"><input type="radio" id="r2-2" name="selectRadioLv2">[12] 경제적 지원<br/>(수습 복구)</label></li>
                 <li><label for="r2-3"><input type="radio" id="r2-3" name="selectRadioLv2">[13] 장례지원<br />(비상 대응)</label></li>
               </ul>
@@ -58,7 +62,7 @@
     </div>
   </main>
 </div>
-@@include('../../inc/esop/p_sopCollabo.html')
+@@include('../../inc/esop/p_modify_status.html')
 @@include('../../inc/script.html')
 </body>
 </html>

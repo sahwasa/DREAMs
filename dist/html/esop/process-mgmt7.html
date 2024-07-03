@@ -124,7 +124,7 @@
         <header>
           <h2>재난상황 발생관리<span>재난대응 프로세스 관리</span></h2>
           <div class="tool">
-            <button type="button" class="btn_add" popovertarget="p_add_dpt">등록</button>
+            <button type="button" class="btn_add" popovertarget="p_add_disasterStatus">등록</button>
           </div>
         </header>        
         <div class="tbl_wrap">         
@@ -160,22 +160,24 @@
     </div>
   </main>
 </div>
-<dialog id="p_add_dpt" style="--width:400px" popover="manual">
+<dialog id="p_add_disasterStatus" style="--width:400px" popover="manual">
   <form method="dialog">
     <header class="p_header tit">
-      <h1>재난대응 프로세스 부서 등록 or 수정</h1>
+      <h1>재난상황 등록</h1>
       <div class="tool">
-        <button type="button" class="btn_close" popovertarget="p_add_dpt" popoveraction="hide">닫기</button>
+        <button type="button" class="btn_close" popovertarget="p_add_disasterStatus" popoveraction="hide">닫기</button>
       </div>
     </header>
     <section class="p_body">
       <ul class="ipt_lst dot_lst">
-        <li><label for="" class="required">부서명</label><input type="text" id="" placeholder="부서명 입력 후 저장"/></li>        
+        <li><label for="" class="required">명칭</label><input type="text" id="" placeholder="재난상황 명칭"/></li>        
+        <li><label for="" class="required">발생일시</label><input type="datetime-local" id="" placeholder="재난상황 발생일시"/></li>        
+        <li><label for="" class="required">종료일시</label><input type="datetime-local" id="" placeholder="재난상황 종료일시"/></li>        
       </ul>
     </section>
     <section class="p_foot">
       <button type="submit" class="btn_blue">저장</button>
-      <button type="button" class="btn_gray"  popovertarget="p_add_dpt" popoveraction="hide">취소</button>
+      <button type="button" class="btn_gray"  popovertarget="p_add_disasterStatus" popoveraction="hide">취소</button>
     </section>
   </form>
 </dialog>
