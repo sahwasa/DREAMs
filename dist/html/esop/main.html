@@ -119,17 +119,6 @@
 </nav>
       <section class="content esop_main">
         <section>          
-          <article class="flood_status">
-            <header class="tit">
-              <h1>경보단계</h1>              
-            </header>
-            <!-- step1:관심,step2:주의,step3:경계,step4:심각
-            
-             -->
-            <div class="dtl step4">
-              <p class="blind">주의 단계</p>
-            </div>            
-          </article>
           <article class="weather_advisory">
             <header class="tit">
               <h1>기상특보</h1>              
@@ -191,36 +180,106 @@
             <div class="gis">
             </div>
           </article>
-          <article>
-            <header class="tit">
-              <h1>재난대응 프로세스</h1>
-            </header>
-            <div class="tbl_wrap">
-              <table class="tbl_lst">
-                <thead>
-                  <tr>
-                    <th scope="col">전체</th>
-                    <th scope="col">조치 전</th>
-                    <th scope="col">조치 중</th>
-                    <th scope="col">조치 완료</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>12</td>
-                    <td>34</td>
-                    <td>56</td>
-                    <td>78</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
+          <div class="flex_wrap disaster_state">
+            <article>
+              <header class="tit">
+                <h1>재난대응 프로세스</h1>
+                <div class="tool">
+                  <ul class="legend">
+                    <li class="i_default">완료</li>
+                    <li class="i_error">진행 전</li>
+                    <li class="i_delay">진행 중</li>
+                  </ul>
+                  <button type="button" class="btn_more" title="바로가기">바로가기</button>
+                </div>
+              </header>
+              <div class="tbl_wrap">
+                <table class="tbl_lst">
+                  <thead>
+                    <tr>
+                      <th scope="col">전체</th>
+                      <th scope="col">조치 전</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12</td>
+                      <td>34</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="step">
+                <div class="lst_wrap">
+                  <ul>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                    <li><button type="button" popovertarget="p_emergencyProcess" class="i_error">1단계 · [1-2] 징후 파악</button></li>
+                  </ul>
+                </div>                    
+              </div>
+            </article>
+            <article>
+              <header class="tit">
+                <h1>재난상황 피해현황</h1>
+              </header>
+              <div class="tbl_wrap">
+                <table class="tbl_lst">
+                  <thead>
+                    <tr>
+                      <th scope="col">재난상황전파</th>
+                      <th scope="col">대응상황보고</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12</td>
+                      <td>78</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
         </section>
         <section>
+          <article class="flood_status">
+            <header class="tit">
+              <h1>경보단계</h1>
+            </header>
+            <ul class="alert_stage">
+              <li><label for="step1"><input type="radio" id="step1" name="step">관심</label></li>
+              <li><label for="step2"><input type="radio" id="step2" name="step">주의</label></li>
+              <li><label for="step3"><input type="radio" id="step3" name="step">경계</label></li>
+              <li><label for="step4"><input type="radio" id="step4" name="step" checked>심각</label></li>
+            </ul>
+          </article>
+          <article class="flood_status">
+            <header class="tit">
+              <h1>대응단계 설정</h1>
+            </header>
+            <ul class="action_stage">
+              <li><label for="action1"><input type="radio" id="action1" name="action">징후감지</label></li>
+              <li><label for="action2"><input type="radio" id="action2" name="action">초기대응</label></li>
+              <li><label for="action3"><input type="radio" id="action3" name="action">비상대응</label></li>
+              <li><label for="action4"><input type="radio" id="action4" name="action" checked>수습복구</label></li>
+            </ul>
+          </article>
           <article>
             <header class="tit">
               <h1>재난상황전파 및 대응상황보고</h1>
+              <div class="tool">
+                <button type="button" class="btn_blue" onclick="openPopup('../../inc/esop/p_write_report.html','상황보고서 작성','780px','850px')">상황보고서 작성</button>
+              </div>
             </header>
             <div class="tbl_wrap">
               <table class="tbl_lst">
@@ -237,21 +296,32 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div>            
           </article>
           <article>
             <header class="tit">
-              <h1>조치결과 체크리스트</h1>
+              <h1>재난상황 목록</h1>
+              <div class="tool">
+                <button type="button" class="btn_blue">등록하기</button>
+              </div>
             </header>
             <div class="tbl_wrap">
               <table class="tbl_lst">
                 <thead>
                   <tr>
-                    <th scope="col">상황전파 및 보고</th>
-                    <th scope="col">체크리스트</th>
+                    <th scope="col">재난상황명</th>
+                    <th scope="col">상태</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>56</td>
+                    <td>78</td>
+                  </tr>
+                  <tr>
+                    <td>56</td>
+                    <td>78</td>
+                  </tr>
                   <tr>
                     <td>56</td>
                     <td>78</td>

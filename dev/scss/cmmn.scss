@@ -94,6 +94,9 @@ input[type="time"]::after{@include fontello('\eb02');font-size:18px;}
 .btn_refresh{@include btn(#cbcbcb,'\e84c');color:#939393;padding:0 8px;line-height:20px;
   &::before{font-size:12px;}
 }
+.btn_contact{@include ico_only('\e97b');}
+.btn_progress{@include ico_only('\e921');}
+.btn_more{@include ico_only('\e819');}
 .btn_del{@include ico_only('\eb2e');}
 .btn_ex{@include ico_only('\eb35'){font-size:18px;};}
 .btn_modify{@include ico_only('\eb94'){font-size:18px;};
@@ -206,7 +209,7 @@ $navH:280px;
 }
 .ipt_lst{display:flex;gap:7px;
   li{display:flex;align-items:center; min-height:34px;
-    &>.label,&>label{flex:0 0 95px;font-size:14px;color:#000;font-weight:700;}
+    &>.label,&>label{flex:0 0 115px;font-size:14px;color:#000;font-weight:700;}
   }
   input[type="text"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="password"],textarea,[contenteditable],select{width:100%;font-size:14px;border:1px solid #d6d6d6;color:#555;min-height:34px;}
   [contenteditable]{min-height:var(--h);max-height:430px;overflow-y:auto;}
@@ -247,6 +250,7 @@ $navH:280px;
     thead{position:sticky;left:0;top:0;
     &::after{position:absolute;left:0;bottom:-1px;@include shape(100%, calc(100% + 2px));border-top:2px solid $purple;border-bottom:1px solid #ddd;}
     }
+    td > button{margin:0 3px;}
   }
 }
 .tbl_hover tbody tr:hover{cursor:pointer;background-color:#f6f6f6;}
@@ -286,6 +290,15 @@ $navH:280px;
   [contenteditable=true]{@include ipt_common;height:100%;}
   td:has(ul){white-space:initial;}
 }
+.tbl_data{width:100%;
+  th,td{border:1px solid #d6d6d6;padding:3px;letter-spacing:-.6px;
+    word-break: keep-all;text-align:center;line-height:1.3;height:26px;
+  }
+  thead th{background-color:#f2f2f3;white-space:nowrap;font-weight:600;}
+  tbody tr:first-child :is(th,td){border-top-width:0;}
+
+
+}
 .cont_body{flex:1;display:flex;justify-content:space-between;position:relative;min-height:366px;overflow:hidden;}
 .bredcrumb{
   ul{display:flex;justify-content:flex-end;}
@@ -301,6 +314,7 @@ $navH:280px;
 .tit{display:flex;align-items:center;@include tit('h1,h2');
   .tool{margin-left:auto;
     select{border:1px solid #000;border-radius:3px;min-width:var(--w);line-height:34px;}
+    .btn_more::before{font-size:15px;content:"\eb3c";}
   }
 }
 .asymmetrical{display:flex;gap:$maingap;
@@ -698,7 +712,7 @@ $navH:280px;
 }
 .esop_main{display:flex;gap:20px;
   & > section{@extend .box_blue;flex:1;display:flex;flex-direction:column;gap:10px;
-    &:has(.flood_status){flex:0 0 353px;}
+    &:has(.heavy_rain){flex:0 0 353px;}
     &:has(.gis_wrap){flex:2;th{width:25%;}}
     th{width:50%;}
   }
@@ -707,17 +721,56 @@ $navH:280px;
   }
   .gis_wrap{height:100%;}
   .flood_status{flex:1 0 auto;
-    .dtl{width:293px;background-size:initial;padding-top:94px;}
-    @each $color in $_status{
-      $idx :index($_status, $color);
-      .step#{$idx}{background-position-x:calc(-313px * ($idx - 1));
+    // .dtl{width:293px;background-size:initial;padding-top:94px;}
+    // @each $color in $_status{
+    //   $idx :index($_status, $color);
+    //   .step#{$idx}{background-position-x:calc(-313px * ($idx - 1));
+    //   }
+    // }
+    .alert_stage{display:flex;padding:30px 20px;
+      li{position:relative;flex:1;color:#fff;font-size:15px;font-weight:700;margin-left:-5px;
+        &:first-child label{border-radius:20px 0 0 20px;}
+        &:last-child label{border-radius:0 20px 20px 0;}
+        label{width:100%;height:40px;display:flex;align-items:center;justify-content:center;white-space:nowrap;cursor:pointer;letter-spacing:-.05em;}
+        @each $color in $_status{
+          $idx :index($_status, $color);
+          &:nth-child(#{$idx}) label{background-color:$color;text-shadow:0 0 5px darken($color, 30);outline:0px solid rgba($color,.3);}
+        }
+        &:hover{font-size:16px;}   
+        label:has(input:checked){position:absolute;left:50%;top:50%;border-radius:50%;aspect-ratio:1;height:auto;transform:translate(-50%, -50%);z-index:5;outline-width:10px;font-size:20px;}
       }
     }
+  }
+  .action_stage{display:flex;
+    li{flex:1;position:relative;
+      &:not(:last-child){flex:.9;
+        &::after{position:absolute;@include shape(28px,28px);background-color: #e7e7ef;transform:rotate(45deg);right:-13px;top:6px;border:1px solid #cbcbcb;border-width:1px 1px 0 0;z-index:5;}
+      }
+      &:first-child{flex:.8;
+        label{padding-left:10px;}
+      }
+      @for $i from 1 through 4{        
+        &:nth-of-type(#{$i}){background-color:darken(#b0afc9, 5 * $i);
+          &::after{background-color:darken(#b0afc9, 5 * $i);}
+        }
+      }
+    }
+    label{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:40px;color:#fff;z-index:20;padding-left:20px;cursor:pointer;}
   }
   .weather_advisory{text-align:center;
     figure{display:inline-block;}
     figcaption{width:100%;text-align:left;font-size:14px;color: $red;font-weight:600;letter-spacing:-.14px;margin-bottom:10px;}
     img{max-height:165px;}
+  }
+}
+.disaster_state{gap:10px;align-items:flex-start;
+  &>article{flex:1;}
+  .legend{display:inline-flex;gap:5px;vertical-align:middle;font-size:11px;border-right:1px solid #ccc;padding-right:12px;margin-right:8px;line-height:5px;
+    li{display:flex;flex-direction:row-reverse;align-items:center;gap:5px;}
+  }
+  .step .lst_wrap{flex:1;height:200px;min-height:auto;
+    li{padding:0 15px;}
+    button{padding:5px 0;}
   }
 }
 .esop_main .heavy_rain{padding:15px 0;
@@ -753,10 +806,9 @@ $navH:280px;
     dt{font-weight:700;color:#000;font-size:15px;
       &:not(:first-of-type){margin-top:20px;}
     }
-    dd{
-      &:hover{background-color:#EFEDF9;}
-      button{display:flex;align-items:center;width:100%;color:#555;text-align:left;gap:5px;}
-    }
+    &:not(:has(dd)) li:hover,
+    dd:hover{background-color:#EFEDF9;}
+    button{display:flex;align-items:center;width:100%;color:#555;text-align:left;gap:5px;}
     li{position:relative;display:flex;width:100%;align-items:center;padding:15px 20px;gap:5px;text-align:left;
       &:has(:checked){background-color:lighten($periwinkle, 36);}
       &::after{@include shape(calc(100% - 30px),0);position:absolute;bottom:0;left:15px;border-bottom:1px solid #ebebeb;}
@@ -766,17 +818,19 @@ $navH:280px;
     .btn_add{width:200px;justify-content:center;border-color:#c5c5c8;color:#555;padding:8px 0;font-size:15px;margin-top:20px;
       &:hover{color:#fff;}
     }
-  }
-  &:has(.status_wrap) .lst_wrap{height:calc(100vh - 435px);min-height:365px;}
-  .i{
-    :is(&_default,&_delay,&_error)::after{@include shape(15px,15px);border-radius:50%;background-color:red;border:1px solid transparent;}
-    @each $type, $col in $_signal{
-      $idx: index($_signal, $type $col);
-      &_#{$type}::after{border-color:darken($col,10);background:linear-gradient(lighten($col,30), $col, darken($col,5));}
-    }    
-  }
+  }  
 }
-.search_area + .step .lst_wrap{height: calc(100vh - 339px);min-height:465px;}
+.i{
+  :is(&_default,&_delay,&_error)::after{@include shape(15px,15px);border-radius:50%;background-color:red;border:1px solid transparent;vertical-align:middle;}
+  @each $type, $col in $_signal{
+    $idx: index($_signal, $type $col);
+    &_#{$type}::after{border-color:darken($col,10);background:linear-gradient(lighten($col,30), $col, darken($col,5));}
+  }    
+}
+.search_area + .step{
+  .lst_wrap{height: calc(100vh - 340px);min-height:460px;}
+  &:has(.status_wrap) .lst_wrap{height:calc(100vh - 435px);min-height:365px;}
+}
 .status_wrap{padding:18px 25px;border-bottom:1px solid #ddd;
   ul{display:flex;border-radius:10px;border:1px solid #ebebeb;border-top-width:0;}
   li{flex:1;text-align:center;

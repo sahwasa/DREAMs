@@ -3,6 +3,8 @@
   <header class="p_header tit">
     <h1>상황보고</h1>
     <div class="tool">
+      <button type="button" class="btn_contact" title="비상연락망" onclick="window.open('p_contact.html','비상연락망','location=no, toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=1200, height=700, top=0,left=0')">비상연락망</button>
+      <button type="button" class="btn_progress" title="재난대응 프로세스" onclick="pop = window.open('p_process.html','재난대응 프로세스','location=no, toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=1200, height=700, top=0,left=0')">재난대응 프로세스</button>
       <button type="button" class="btn_close" onclick="window.close();">닫기</button>
     </div>
   </header>
@@ -18,23 +20,29 @@
           <li>조치내용 : 상황보고서 작성 및 전파</li>
         </ul>
       </div>
-      <div class="chat_q">
-        <p>1. 침수 발생일자 및 시간?</p>
+      <div>
+        <div class="chat_q">
+          <p>1. 침수 발생일자 및 시간?</p>
+        </div>
+        <div class="chat_a">
+          <p>2024년 7월 1일 2시</p>
+        </div>
       </div>
-      <div class="chat_a">
-        <p>2024년 7월 1일 2시</p>
+      <div>
+        <div class="chat_q">
+          <p>2. 침수발생 장소 및 원인?</p>
+        </div>
+        <div class="chat_a">
+          <p>삼척 시 해안</p>
+        </div>
       </div>
-      <div class="chat_q">
-        <p>2. 침수발생 장소 및 원인?</p>
-      </div>
-      <div class="chat_a">
-        <p>삼척 시 해안</p>
-      </div>
-      <div class="chat_q">
-        <p>3. 내용을 입력하세요.</p>
-      </div>
-      <div class="chat_a">
-        <p>침수발생으로 피해</p>
+      <div>
+        <div class="chat_q">
+          <p>3. 내용을 입력하세요.</p>
+        </div>
+        <div class="chat_a">
+          <p>침수발생으로 피해</p>
+        </div>
       </div>
       <div class="chat_end">
         <strong>상황보고가완료 되었습니다</strong>
@@ -43,7 +51,8 @@
     </section>
     <section class="ipt_area">
       <p contenteditable="true" data-empty="답변입력"></p>
-      <button type="submit" class="btn_blue">보내기</button>
+      <button type="submit" class="btn_blue_line">전송하기</button>
+      <button type="submit" class="btn_blue">제출하기</button>
     </section>
   </section>
 </div>
