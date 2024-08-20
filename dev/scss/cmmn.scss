@@ -845,8 +845,10 @@ $navH:280px;
     &:last-child label{border-top-right-radius:10px;}
   }
   label{position:relative;display:block;line-height:30px;color:#fff;}
-  input[type="checkbox"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;
-    &:checked::before{@include fontello('\e813');line-height:28px;}
+  input[type="checkbox"]{-webkit-appearance:none;-moz-appearance:none;appearance:none;visibility:hidden;
+    &:checked::before{@include fontello('\e813');line-height:28px;visibility:visible;
+      @include ios_only{vertical-align:top;line-height:1;}
+    }
   }
 }
 .p_body:has(.dpt_lst){border:1px solid $lightpurple;padding:12px 15px;}

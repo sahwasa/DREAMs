@@ -45,7 +45,8 @@
   @media (max-width: #{$breakpoint-desktop}){@content;}}
 @mixin desktop_only{
   @media (min-width: #{$breakpoint-desktop}){@content;}}
-
+@mixin ios_only{
+ @supports (-webkit-touch-callout: none)  {@content;}}
 @mixin blind{
   font-size:0;line-height:0;position:absolute!important;left:0;top:0;text-indent:-9999px;visibility:hidden;overflow:hidden;
 }

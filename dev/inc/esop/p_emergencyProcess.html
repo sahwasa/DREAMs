@@ -3,14 +3,15 @@
     <header class="p_header tit">
       <h1>재난대응 프로세스</h1>
       <div class="tool">
-        <button type="button" class="btn_close" popovertarget="p_emergencyProcess" popovertargetaction="hide">닫기</button>
+        <button type="button" class="btn_close"
+         onclick="document.getElementById('p_emergencyProcess').close();" >닫기</button>
       </div>
     </header>
     <section class="p_body">      
       <div class="tbl_wrap">
         <div class="top_wrap">
           <span class="right">           
-            <button type="button" class="btn_blue_line" popovertarget="p_SendSopList">상황전파</button>
+            <button type="button" class="btn_blue_line" onclick="document.getElementById('p_SendSopList').showModal();">상황전파</button>
             <button type="button" class="btn_blue_line" onclick="openPopup('../../inc/esop/p_situation_report.html','상황보고','600px','800px')">상황보고</button>
           </span>
         </div>
@@ -28,15 +29,15 @@
           </tr>
           <tr>
             <th scope="row">주관부서</th>
-            <td><span>재난안전과</span><button type="button" class="btn_purple" popovertarget="p_supportModal">선택</button></td>
+            <td><span>재난안전과</span><button type="button" class="btn_purple" onclick="document.getElementById('p_supportModal').showModal();">선택</button></td>
           </tr>
           <tr>
             <th scope="row">지원부서</th>
-            <td><p>건강증진과, 건설과, 건축과, 교통과, 기획조정실, 문화홍보실, 보건정책과, 복지정책과, 사고수습 주관부서, 사회복지과, 산림과, 삼척경찰서, 상수도사업소, 상황실, 에너지과, 읍면동 사무소, 읍면동 주민센터, 읍면동 환경부서, 총무과, 하수도사업소, 환경과</p><button type="button" class="btn_purple" popovertarget="p_supportModal">선택</button></td>
+            <td><p>건강증진과, 건설과, 건축과, 교통과, 기획조정실, 문화홍보실, 보건정책과, 복지정책과, 사고수습 주관부서, 사회복지과, 산림과, 삼척경찰서, 상수도사업소, 상황실, 에너지과, 읍면동 사무소, 읍면동 주민센터, 읍면동 환경부서, 총무과, 하수도사업소, 환경과</p><button type="button" class="btn_purple" onclick="document.getElementById('p_supportModal').showModal();">선택</button></td>
           </tr>
           <tr>
             <th scope="row">협업기관</th>
-            <td><button type="button" class="btn_purple" popovertarget="p_supportModal">선택</button></td>
+            <td><button type="button" class="btn_purple" onclick="document.getElementById('p_supportModal').showModal();">선택</button></td>
           </tr>
           <tr>
             <td colspan="2">에디터</td>
@@ -59,7 +60,7 @@
     <header class="p_header tit">
       <h1>지원부서</h1>
       <div class="tool">
-        <button type="button" class="btn_close" popovertarget="p_supportModal" popovertargetaction="hide">닫기</button>
+        <button type="button" class="btn_close" onclick="document.getElementById('p_supportModal').close();">닫기</button>
       </div>
     </header>
     <section class="p_body">
