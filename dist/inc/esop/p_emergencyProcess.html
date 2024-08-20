@@ -1,0 +1,151 @@
+<dialog id="p_emergencyProcess" class="p_emergencyProcess" style="--width:1160px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>재난대응 프로세스</h1>
+      <div class="tool">
+        <button type="button" class="btn_close"
+         onclick="document.getElementById('p_emergencyProcess').close();" >닫기</button>
+      </div>
+    </header>
+    <section class="p_body">      
+      <div class="tbl_wrap">
+        <div class="top_wrap">
+          <span class="right">           
+            <button type="button" class="btn_blue_line" onclick="document.getElementById('p_SendSopList').showModal();">상황전파</button>
+            <button type="button" class="btn_blue_line" onclick="openPopup('../../inc/esop/p_situation_report.html','상황보고','600px','800px')">상황보고</button>
+          </span>
+        </div>
+        <ul class="process_lst">
+          <li>징후감지</li><li>초기대응</li><li class="on">비상대응</li><li>수습복구</li>
+        </ul>
+        <table class="tbl_row tbl_withEditor">
+          <tr>
+            <th scope="row">조치목록</th>
+            <td>[7] 재난안전상황실 (지대본 상황실) 가동</td>
+          </tr>
+          <tr>
+            <th scope="row">조치내용</th>
+            <td>[7-8] 주요인사 상황실 방문시 브리핑</td>
+          </tr>
+          <tr>
+            <th scope="row">주관부서</th>
+            <td><span>재난안전과</span><button type="button" class="btn_purple" onclick="document.getElementById('p_supportModal').showModal();">선택</button></td>
+          </tr>
+          <tr>
+            <th scope="row">지원부서</th>
+            <td><p>건강증진과, 건설과, 건축과, 교통과, 기획조정실, 문화홍보실, 보건정책과, 복지정책과, 사고수습 주관부서, 사회복지과, 산림과, 삼척경찰서, 상수도사업소, 상황실, 에너지과, 읍면동 사무소, 읍면동 주민센터, 읍면동 환경부서, 총무과, 하수도사업소, 환경과</p><button type="button" class="btn_purple" onclick="document.getElementById('p_supportModal').showModal();">선택</button></td>
+          </tr>
+          <tr>
+            <th scope="row">협업기관</th>
+            <td><button type="button" class="btn_purple" onclick="document.getElementById('p_supportModal').showModal();">선택</button></td>
+          </tr>
+          <tr>
+            <td colspan="2">에디터</td>
+          </tr>         
+        </table>
+      </div>      
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">저장</button>
+      <button type="submit" class="btn_blue_line">수정</button>
+      <button type="button" class="btn_gray" popovertarget="p_emergencyProcess" popovertargetaction="hide">취소</button>
+    </section>
+  </form>
+</dialog>
+
+<dialog id="p_SendSopList" class="p_SendSopList" style="--width:600px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>상황전파</h1>
+      <div class="tool">
+        <button type="button" class="btn_close"  onclick="document.getElementById('p_SendSopList').close();">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <div class="tab_wrap">
+        <ul class="tab tab_s">
+          <li><a href="#tab01">지원부서</a></li>
+          <li><a href="#tab02">주관부서</a></li>
+          <li><a href="#tab03">협업기관</a></li>
+        </ul>
+      </div>
+      <div class="tab_container">
+        <section id="tab01" class="tab_contents tbl_wrap tbl_scroll">
+          <table class="tbl_lst">
+            <thead>
+              <tr>
+                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
+                <th scope="col">부서명</th>
+                <th scope="col">이름</th>
+                <th scope="col">이메일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"></td>
+                <td>재난안전과</td>
+                <td>담당자</td>
+                <td>abc@korea.go.kr</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="row_check" title="줄선택"></td>
+                <td>재난안전과</td>
+                <td>담당자</td>
+                <td>abc@korea.go.kr</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="tab02" class="tab_contents tbl_wrap tbl_scroll">주관부서</section>
+        <section id="tab03" class="tab_contents tbl_wrap tbl_scroll">협업기관</section>
+      </div>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">전송</button>
+      <button type="button" class="btn_gray" popovertarget="p_SendSopList" popovertargetaction="hide">취소</button>
+    </section>
+  </form>
+</dialog>
+
+<dialog id="p_supportModal" class="p_supportModal" style="--width:600px" popover="manual">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>지원부서</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" onclick="document.getElementById('p_supportModal').close();">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <ul class="dpt_lst">
+        <li><label for="dpt1"><input type="checkbox" id="dpt1">건강증진과</label></li>
+        <li><label for="dpt2"><input type="checkbox" id="dpt2">건설과</label></li>
+        <li><label for="dpt3"><input type="checkbox" id="dpt3">건축과</label></li>
+        <li><label for="dpt4"><input type="checkbox" id="dpt4">교통과</label></li>
+        <li><label for="dpt5"><input type="checkbox" id="dpt5">기획조정실</label></li>
+        <li><label for="dpt6"><input type="checkbox" id="dpt6">농정과</label></li>
+        <li><label for="dpt7"><input type="checkbox" id="dpt7">문화홍보실</label></li>
+        <li><label for="dpt8"><input type="checkbox" id="dpt8">보건정책과</label></li>
+        <li><label for="dpt9"><input type="checkbox" id="dpt9">복지정책과</label></li>
+        <li><label for="dpt10"><input type="checkbox" id="dpt10">사고수습 주관부서</label></li>
+        <li><label for="dpt11"><input type="checkbox" id="dpt11">사회복지과</label></li>
+        <li><label for="dpt12"><input type="checkbox" id="dpt12">산림과</label></li>
+        <li><label for="dpt13"><input type="checkbox" id="dpt13">삼척경찰서</label></li>
+        <li><label for="dpt14"><input type="checkbox" id="dpt14">상수도사업소</label></li>
+        <li><label for="dpt15"><input type="checkbox" id="dpt15">상황실</label></li>
+        <li><label for="dpt16"><input type="checkbox" id="dpt16">에너지과</label></li>
+        <li><label for="dpt17"><input type="checkbox" id="dpt17">읍면동 사무소</label></li>
+        <li><label for="dpt18"><input type="checkbox" id="dpt18">읍면동 주민센터</label></li>
+        <li><label for="dpt19"><input type="checkbox" id="dpt19">읍면동 환경부서</label></li>
+        <li><label for="dpt20"><input type="checkbox" id="dpt20">재난안전과</label></li>
+        <li><label for="dpt21"><input type="checkbox" id="dpt21">총무과</label></li>
+        <li><label for="dpt22"><input type="checkbox" id="dpt22">충산과</label></li>
+        <li><label for="dpt23"><input type="checkbox" id="dpt23">하수도사업소</label></li>
+        <li><label for="dpt24"><input type="checkbox" id="dpt24">환경과</label></li>
+      </ul>
+    </section>
+    <section class="p_foot">
+      <button type="submit" class="btn_blue">확인</button>
+      <button type="button" class="btn_gray" popovertarget="p_supportModal" popovertargetaction="hide">취소</button>
+    </section>
+  </form>
+</dialog>

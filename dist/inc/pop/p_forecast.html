@@ -1,0 +1,90 @@
+<dialog class="p_forecast" style="--width:1000px">
+  <form method="dialog">
+    <header class="tit tab_wrap">
+      <ul class="tab">
+        <li><a href="#tab01">동네예보</a></li>
+        <li><a href="#tab02">AWS</a></li>
+      </ul>
+      <div class="tool">
+        <em>경기도 용인시 처인구</em>
+        <b class="date">2023.10.10</b>
+      </div>
+    </header>
+    <div class="tab_container">
+      <section id="tab01" class="tab_contents">
+        <div class="tbl_wrap">
+          <table class="tbl_weather head">
+            <tr><th scope="row">시간</th></tr>
+            <tr><th scope="row">날씨</th></tr>
+            <tr><th scope="row">강수</th></tr>
+            <tr><th scope="row">습도</th></tr>
+            <tr><th scope="row">바람</th></tr>
+          </table>
+          <div class="tbl_scroll_x">
+            <table class="tbl_weather">
+              <tr class="times">
+                <td data-date="10일(화)">07시</td><td>08시</td><td>09시</td><td>10시</td><td>11시</td><td>12시</td><td>13시</td><td>14시</td><td>15시</td><td>16시</td><td>17시</td><td>18시</td><td>19시</td><td>20시</td><td>21시</td><td>22시</td><td>23시</td><td data-date="11일(수)">0시</td><td>01시</td><td>02시</td><td>03시</td>
+              </tr>
+              <tr class="temp">
+                <td colspan="18">
+                  <div class="chart_wrap">
+                    <canvas id="chart_temp"></canvas>
+                  </div>
+                </td>              
+              </tr>
+              <tr class="weathers">
+                <td><i class="weather1" title="맑음"></i></td>
+                <td><i class="weather2" title="맑음(밤)"></i></td>
+                <td><i class="weather3" title="구름 조금"></i></td>
+                <td><i class="weather4" title="구름 조금(밤)"></i></td>
+                <td><i class="weather5" title="구름 많음"></i></td>
+                <td><i class="weather6" title="구름 많음(밤)"></i></td>
+                <td><i class="weather7" title="흐림"></i></td>
+                <td><i class="weather8" title="낙뢰와 비"></i></td>
+                <td><i class="weather9" title="소나기"></i></td>
+                <td><i class="weather10" title="한때 비"></i></td>
+                <td><i class="weather11" title="눈"></i></td>
+                <td><i class="weather12" title="한때 눈"></i></td>
+                <td><i class="weather13" title="빗방울"></i></td>
+                <td><i class="weather14" title="눈날림"></i></td>
+                <td><i class="weather15" title="낙뢰"></i></td>
+                <td><i class="weather16" title="안개"></i></td>
+                <td><i class="weather1" title="맑음"></i></td>
+                <td><i class="weather2" title="맑음(밤)"></i></td>
+              </tr>
+              <tr class="precipitation">
+                <td><i style="--val:0;"></i>-</td>
+                <td><i style="--val:0;"></i>-</td>
+                <td><i style="--val:0;"></i>-</td>
+                <td><i style="--val:20;"></i>20%</td>
+                <td><i style="--val:70;"></i>70%</td>
+                <td><i style="--val:80;"></i>80%</td>
+                <td><i style="--val:100;"></i>100%</td>
+              </tr>
+              <tr class="humidity">
+                <td><p style="--val:90;">90</p></td>
+                <td><p style="--val:90;">90</p></td>
+                <td><p style="--val:90;">90</p></td>
+                <td><p style="--val:100;">100</p></td>
+                <td><p style="--val:80;">80</p></td>
+                <td><p style="--val:80;">80</p></td>
+                <td><p style="--val:80;">80</p></td>
+              </tr>
+              <tr class="winds">
+                <td><i class="wind1" title="북서풍"></i>북서풍</td>
+                <td><i class="wind2" title="북풍"></i>북풍</td>
+                <td><i class="wind3" title="북동풍"></i>북동풍</td>
+                <td><i class="wind4" title="동풍"></i>동풍</td>
+                <td><i class="wind5" title="남동풍"></i>남동풍</td>
+                <td><i class="wind6" title="남풍"></i>남풍</td>
+                <td><i class="wind7" title="남서풍"></i>남서풍</td>
+                <td><i class="wind8" title="서풍"></i>서풍</td>
+              </tr>
+            </table>        
+          </div>
+        </div>
+      </section>
+      <section class="tab_contents"></section>    
+    </div>
+  </form>
+</dialog>
