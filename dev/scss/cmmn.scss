@@ -721,12 +721,6 @@ $navH:280px;
   }
   .gis_wrap{height:100%;}
   .flood_status{flex:1 0 auto;
-    // .dtl{width:293px;background-size:initial;padding-top:94px;}
-    // @each $color in $_status{
-    //   $idx :index($_status, $color);
-    //   .step#{$idx}{background-position-x:calc(-313px * ($idx - 1));
-    //   }
-    // }
     .alert_stage{display:flex;padding:30px 20px;
       li{position:relative;flex:1;color:#fff;font-size:15px;font-weight:700;margin-left:-5px;
         &:first-child label{border-radius:20px 0 0 20px;}
