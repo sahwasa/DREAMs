@@ -6,15 +6,16 @@ const toggle = (el) => {
 // 배경지도변경
 const maptype = document.querySelectorAll('input[name="map_type"]');
 const lst_cctv = document.querySelector('.lst_cctv');
+const lst_facility = document.querySelector('.lst_facility');
 const lst_sensor = document.querySelector('.lst_sensor');
 const temp_map = document.querySelector('#temp_map');
 const pipe = document.querySelector('.pipe');
 
 const map_url = {
-  manhole : '../../images/temp/map-manhole.png',
-  pipe : '../../images/temp/map-pipe.png',
-  pnm : '../../images/temp/map-pnm.png',
-  default : '../../images/temp/map-default.png'
+  manhole : '/images/temp/map-manhole.png',
+  pipe : '/images/temp/map-pipe.png',
+  pnm : '/images/temp/map-pnm.png',
+  default : '/images/temp/map-default.png'
 }
 const types = (event) =>{
   const checkbox = event.target,
@@ -42,6 +43,9 @@ const types = (event) =>{
       break;
     case "map_type4":
       (isChecked)? lst_cctv.style.display = 'block' : lst_cctv.style.display = 'none';
+      break;
+    case "map_type5":
+      (isChecked)? lst_facility.style.display = 'block' : lst_facility.style.display = 'none';
       break;
   } 
 }

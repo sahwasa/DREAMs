@@ -39,6 +39,7 @@
           <li><a href="../default/infra_manhole.html">맨홀</a></li>
           <li><a href="../default/infra_pipe.html">관로</a></li>
           <li><a href="../default/infra_cctv.html">CCTV</a></li>
+          <li><a href="../default/infra_cctv.html">시설물</a></li>
         </ul>
       </li>
       <li><a href="../default/admin_user.html">시스템 관리</a>
@@ -120,6 +121,7 @@
           <li><input type="checkbox" id="map_type2" name="map_type"><label for="map_type2">맨홀</label></li>
           <li><input type="checkbox" id="map_type3" name="map_type"><label for="map_type3">관로</label></li>
           <li><input type="checkbox" id="map_type4" name="map_type"><label for="map_type4">CCTV</label></li>
+          <li><input type="checkbox" id="map_type5" name="map_type"><label for="map_type5">시설물</label></li>
         </ul>
         <div class="map_layer">
           <button type="button" onclick="toggle('.p_forecast');" class="btn_forecast weather1">23℃ 맑음</button>
@@ -220,6 +222,11 @@
           <li><input type="radio" id="sky_view" name="map_style"><label for="sky_view">위성지도</label></input></li>
           <li><input type="radio" id="2d_view" name="map_style"><label for="2d_view">2D지도</label></input></li>
         </ul>
+        <div class="lst_facility">
+          <button type="button" style="--x:500;--y:300;">facility</button>
+          <button type="button" style="--x:300;--y:400;">facility</button>
+          <button type="button" style="--x:450;--y:350;">facility</button>
+        </div>
         <div class="lst_cctv">
           <button type="button" style="--x:400;--y:300;">cctv</button>
           <button type="button" style="--x:200;--y:400;">cctv</button>

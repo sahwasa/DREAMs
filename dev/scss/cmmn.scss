@@ -163,7 +163,7 @@ $navH:280px;
   & > li{position:relative;height:100%;z-index:300;}
   a{color:#b8d8ee;font-weight:700;padding:0 $maingap;}
   @mixin menu_ico($length){    
-    @for $n from 1 to 5{
+    @for $n from 1 through 5{
       li:nth-child(#{$n}) a{background-position-y:(-33px * ($n - 1)) - ($length*33) + 9px;}
     }
   }
@@ -456,7 +456,7 @@ $navH:280px;
   .map_type{left:19px;right:auto;box-shadow:0 1px 3px rgba(0, 0, 0, 0.28);background-color:#fff;
     border-radius:$radious;overflow:hidden;padding-left:1px;gap:5px;padding:5px;border:1px solid #b3b3b3;
     label{position:relative;border-radius:$radious;font-weight:800;font-size:13px;padding:0 7px 0 37px;letter-spacing:-.4px;background-image:url(../images/ico_toolbox.png);background-repeat:no-repeat;background-position:6px 2px;}
-    @for $i from 1 to 5{
+    @for $i from 1 through 5{
       li:nth-child(#{$i}) label{background-position-y:-44px * ($i - 1) + 3px;}
     }
     input:checked + label{background-image: url(../images/ico_toolbox_off.png);}
@@ -486,6 +486,7 @@ $navH:280px;
     }
   }
 }
+.lst_facility,
 .lst_sensor,
 .lst_cctv,
 .lst_maker,
@@ -504,6 +505,7 @@ $navH:280px;
 }
 .lst_sensor > button{background-image:url(../images/ico-maker-iot.png);}
 .lst_cctv > button{background-image:url(../images/ico-maker-cctv.png);}
+.lst_facility > button{background-image:url(../images/ico-maker-facility.png);}
 .lst_maker{display:block;
   &>button{width:38px;height:38px;background:url(../images/maker.png) 0 0 no-repeat;
     &.on{background-position-y:-48px;}
