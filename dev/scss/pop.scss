@@ -198,3 +198,20 @@ body:not(:has(.wrap)) .pop_wrap{box-shadow:none;}
  }
 }
 .p_process th{width:20%;text-align: center;}
+
+.dot_tit{@include tit_bullet('h1');margin-bottom:5px;
+  h1{font-size:16px;}
+}
+.p_dtl_pump{
+  .flex_wrap{align-items:stretch;gap:25px;margin-top:15px;}
+  .analytics{flex:1;}
+}
+.rule_lst{display:flex;flex-direction:column;gap:25px;
+  li{display:flex;gap:15px;
+    .desc{border:1px solid $periwinkle;border-width:2px 0 1px;}
+    strong{display:block;background-color:$lightpurple;color:$bluepurple;padding:5px 10px;margin-bottom:10px;}
+    p{padding:5px 10px;word-break:keep-all;}
+  }
+  figure{position:relative;flex-shrink:0;border:1px solid $border;line-height:0;}
+  figcaption{position:absolute;left:-1px;bottom:-1px;display:inline-block;border:1px solid $border;background-color:#fff;padding:10px 5px;}
+}

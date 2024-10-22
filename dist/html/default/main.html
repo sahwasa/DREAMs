@@ -118,8 +118,8 @@
         </ul>
         <ul class="map_type btn_switch">
           <li><input type="checkbox" id="map_type1" name="map_type"><label for="map_type1">IOT센서</label></li>
-          <li><input type="checkbox" id="map_type2" name="map_type"><label for="map_type2">월류 시나리오</label></li>
-          <li><input type="checkbox" id="map_type3" name="map_type"><label for="map_type3">펌프장 상세</label></li>
+          <li><input type="checkbox" id="map_type2" name="map_type"><label for="map_type2">월류 시나리오</label></li>          
+          <li><button type="button" onclick="document.querySelector('.p_dtl_pump').showModal();">펌프장 상세</button></li>
           <li><input type="checkbox" id="map_type4" name="map_type"><label for="map_type4">침수 위험지역</label></li>
           <li><input type="checkbox" id="map_type5" name="map_type"><label for="map_type5">시설물</label></li>
         </ul>
@@ -264,6 +264,75 @@
     </section>
   </main>
 </div>
+<dialog class="p_dtl_pump" style="--width:1000px">
+  <form method="dialog">
+    <header class="p_header tit">
+      <h1>펌프장 상세</h1>
+      <div class="tool">
+        <button type="button" class="btn_close" onclick="document.querySelector('.p_dtl_pump').close();">닫기</button>
+      </div>
+    </header>
+    <section class="p_body">
+      <div class="flex_wrap">
+        <section>
+          <header class="dot_tit">
+            <h1>현행 펌프장 운영 규칙</h1>
+          </header>
+          <div>
+            <figure>
+              <img src="https://picsum.photos/500/600?random=1" alt="">
+            </figure>
+          </div>
+        </section>
+        <section class="analytics">
+          <header class="dot_tit">
+            <h1>신규 운영 규칙에 따른 비교 분석 정보</h1>
+          </header>
+          <ul class="rule_lst">
+            <li>
+              <div class="desc">
+                <strong>Rule 1</strong>
+                <p>n분 후 예측된 유수지 수위에 의한 펌프 순차 운영</p>
+              </div>
+              <figure>
+                <img src="http://placehold.it/220x180" alt="">
+                <figcaption>RULE1</figcaption>
+              </figure>
+            </li>
+            <li>
+              <div class="desc">
+                <strong>Rule 2</strong>
+                <p><em>평상시 :</em> Rule 1과 동일,</p>
+                <p><em>우수관거 과부하시 :</em> n분 후 까지 유입될 우수 전량 배제</p>
+              </div>
+              <figure>
+                <img src="http://placehold.it/220x180" alt="">
+                <figcaption>RULE2</figcaption>
+              </figure>
+            </li>
+            <li>
+              <div class="desc">
+                <strong>Rule 3</strong>
+                <p>n분 후 초기 가동 수위 이상의 유입량 전량 배제</p>
+              </div>
+              <figure>
+                <img src="http://placehold.it/220x180" alt="">
+                <figcaption>RULE3</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+      </div>      
+    </section>
+    <section class="p_foot">
+      <button type="button" class="btn_gray" onclick="document.querySelector('.p_dtl_pump').close();">닫기</button>
+    </section>
+  </form>
+</dialog>
+
+
+
+
 <script src="../../plugins/jquery.min.js"></script>
 <script src="../../plugins/chart.js/dist/chart.umd.js"></script>
 <script src="../../plugins/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
@@ -274,5 +343,8 @@
 <script src="../../plugins/chart.js/dist/chart.umd.js"></script>
 <script src="../../js/chart_temp.js"></script>
 <script src="../../js/monitoring.js"></script>
+<script>
+document.querySelector('.p_dtl_pump').showModal();
+</script>
 </body>
 </html>

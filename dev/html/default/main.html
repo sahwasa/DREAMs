@@ -67,8 +67,8 @@
         </ul>
         <ul class="map_type btn_switch">
           <li><input type="checkbox" id="map_type1" name="map_type"><label for="map_type1">IOT센서</label></li>
-          <li><input type="checkbox" id="map_type2" name="map_type"><label for="map_type2">월류 시나리오</label></li>
-          <li><input type="checkbox" id="map_type3" name="map_type"><label for="map_type3">펌프장 상세</label></li>
+          <li><input type="checkbox" id="map_type2" name="map_type"><label for="map_type2">월류 시나리오</label></li>          
+          <li><button type="button" onclick="document.querySelector('.p_dtl_pump').showModal();">펌프장 상세</button></li>
           <li><input type="checkbox" id="map_type4" name="map_type"><label for="map_type4">침수 위험지역</label></li>
           <li><input type="checkbox" id="map_type5" name="map_type"><label for="map_type5">시설물</label></li>
         </ul>
@@ -124,9 +124,13 @@
     </section>
   </main>
 </div>
+@@include('../../inc/pop/p_dtl_pump.html')
 @@include('../../inc/script.html')
 <script src="../../plugins/chart.js/dist/chart.umd.js"></script>
 <script src="../../js/chart_temp.js"></script>
 <script src="../../js/monitoring.js"></script>
+<script>
+document.querySelector('.p_dtl_pump').showModal();
+</script>
 </body>
 </html>
