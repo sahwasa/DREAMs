@@ -59,72 +59,45 @@
         <section class="bredcrumb">
           <ul>
             <li><a href="#">Home</a></li>
-            <li>활용인프라관리</li>
-            <li>관로</li>
+            <li>침수 위험 비교</li>
           </ul>
         </section>
-        <h1>관로<span>활용인프라관리</span></h1>
+        <h1>침수 위험 비교<span>SAMPLE</span></h1>
       </header>
       <section class="content">
-        <div class="search_area">
-          <ul class="search_lst">
-            <li><select name="" id="" title="지역"><option value="">지역</option></select></li>
-            <li><select name="" id="" title="구분"><option value="">구분</option></select></li>
-          </ul>
-          <button type="button" class="btn_blue">검색</button>
-        </div>
-        <div class="tbl_wrap">
-          <div class="top_wrap">
-            <span class="right">
-              <button type="button" class="btn_add" onclick="document.querySelector('.p_add_manhole').showModal();">등록</button>
-              <button type="button" class="btn_del2">삭제</button>
-            </span>
+        <div class="compare">
+          <div class="reservoir_wrap warning">
+            <header class="top_wrap">
+              <h1>as-is</h1>
+            </header>
+            <div class="reservoir" style="--ex:80%">
+              <div class="waterLv" style="--h:120%"></div>
+            </div>
+            <div class="status">
+              <i class="i_stoped">정지</i>
+              <i class="i_working">가동중</i>
+            </div>
           </div>
-          <table class="tbl_lst">
-            <caption>관로 관리</caption>
-            <thead>
-              <tr>
-                <th scope="col"><input type="checkbox" class="row_check all_check" title="전체선택"></th>
-                <th scope="col">ID</th>
-                <th scope="col">주소</th>
-                <th scope="col">행정기관코드</th>
-                <th scope="col">현재수심</th>
-                <th scope="col">임계수위</th>
-                <th scope="col">등록자 ID</th>
-                <th scope="col">등록일시</th>
-                <th scope="col">수정</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="checkbox" class="row_check" title="줄선택"/></td>
-                <td>MH-01</td>
-                <td>용인시 기흥구</td>
-                <td>aaaa</td>
-                <td>000000000</td>
-                <td>000000000</td>
-                <td>Admin</td>
-                <td>2020-07-07</td>
-                <td><button type="button" class="btn_modify">수정</button></td>
-              </tr>              
-            </tbody>
-          </table>
-          <div class="paginate tui-pagination" id="pagination">
-  <span class="tui-page-btn tui-is-disabled tui-first">
-    <span class="tui-ico-first">first</span>
-  </span>
-  <span class="tui-page-btn tui-is-disabled tui-prev">
-    <span class="tui-ico-prev">prev</span>
-  </span>
-  <strong class="tui-page-btn tui-is-selected tui-first-child">1</strong>
-  <a href="#" class="tui-page-btn tui-last-child">2</a>
-  <a href="#" class="tui-page-btn tui-next">
-    <span class="tui-ico-next">next</span>
-  </a>
-  <a href="#" class="tui-page-btn tui-last">
-    <span class="tui-ico-last">last</span>
-  </a>
-</div>
+          <div class="reservoir_wrap working">
+            <header class="top_wrap">
+              <h1>to-be</h1>
+            </header>
+            <div class="reservoir" style="--ex:100%">
+              <div class="waterLv" style="--h:80%"></div>
+            </div>
+            <div class="status">
+              <i class="i_stoped">정지</i>
+              <i class="i_working">가동중</i>
+            </div>
+          </div>
+        </div>
+        <div class="cahrt_area">
+          <header class="top_wrap">
+            <h1>유수지 수위 변화</h1>
+          </header>
+          <div class="chart_wrap">
+            <canvas id="chart_compare" style="width:100%;height:300px;"></canvas>
+          </div>
         </div>
       </section>
     </div>
@@ -133,7 +106,7 @@
 <dialog class="p_add_manhole" style="--width:400px">
   <form method="dialog">
     <header class="p_header tit">
-      <h1>관로 추가</h1>
+      <h1>CCTV 추가</h1>
       <div class="tool">
         <button type="button" class="btn_close" onclick="document.querySelector('dialog').close();">닫기</button>
       </div>
@@ -143,10 +116,14 @@
         <li><label for="manhole_id" class="required">ID</label><input type="text" id="manhole_id" /></li>
         <li><label for="manhole_addr" class="required">주소</label><input type="text" id="manhole_addr"></li>
         <li><label for="" class="required">행정기관 코드</label><input type="text"></li>
-        <li><label for="" class="required">현재수심</label><input type="text"></li>
-        <li><label for="" class="required">임계수위</label><input type="text"></li>
-        <!-- <li><label for="" class="required">등록자 ID</label><input type="text"></li> -->
+        <li><label for="" class="required">등록자 ID</label><input type="text"></li>
         <!-- <li><label for="" class="required">등록일시</label><input type="date"></li> -->
+        <li><label for=""class="required">사용여부</label>
+          <span class="btn_switch_single">
+            <input type="checkbox" id="r1" checked="">
+            <label for="r1">사용여부</label>                      
+          </span>
+        </li>
       </ul>
     </section>
     <section class="p_foot">
@@ -162,5 +139,7 @@
 <script>
   commonInit();
 </script>
+<script src="../../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../../js/chart_compare.js"></script>
 </body>
 </html>

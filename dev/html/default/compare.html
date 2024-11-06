@@ -1,0 +1,59 @@
+@@include('../../inc/top.html')
+<div id="wrap" class="wrap">
+  @@include('../../inc/header.html')    
+  <main id="content" class="main_container">
+    <div class="container">
+      <header>
+        <section class="bredcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li>침수 위험 비교</li>
+          </ul>
+        </section>
+        <h1>침수 위험 비교<span>SAMPLE</span></h1>
+      </header>
+      <section class="content">
+        <div class="compare">
+          <div class="reservoir_wrap warning">
+            <header class="top_wrap">
+              <h1>as-is</h1>
+            </header>
+            <div class="reservoir" style="--ex:80%">
+              <div class="waterLv" style="--h:120%"></div>
+            </div>
+            <div class="status">
+              <i class="i_stoped">정지</i>
+              <i class="i_working">가동중</i>
+            </div>
+          </div>
+          <div class="reservoir_wrap working">
+            <header class="top_wrap">
+              <h1>to-be</h1>
+            </header>
+            <div class="reservoir" style="--ex:100%">
+              <div class="waterLv" style="--h:80%"></div>
+            </div>
+            <div class="status">
+              <i class="i_stoped">정지</i>
+              <i class="i_working">가동중</i>
+            </div>
+          </div>
+        </div>
+        <div class="cahrt_area">
+          <header class="top_wrap">
+            <h1>유수지 수위 변화</h1>
+          </header>
+          <div class="chart_wrap">
+            <canvas id="chart_compare" style="width:100%;height:300px;"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+@@include('../../inc/pop/p_add_cctv.html')
+@@include('../../inc/script.html')
+<script src="../../plugins/chart.js/dist/chart.umd.js"></script>
+<script src="../../js/chart_compare.js"></script>
+</body>
+</html>

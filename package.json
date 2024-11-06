@@ -1,7 +1,7 @@
 {
   "name": "DREAMs",
   "version": "1.0.0",
-  "description": "내〮외배수 관리 〮운영 지원 시스템",
+  "description": "Disatster Risk Estimate And Monitoring System for urban inandation(내외배수 관리 운영 지원 시스템)",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
